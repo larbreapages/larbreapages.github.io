@@ -1,1 +1,4 @@
+- [x] Resolve problem render html
+- [x] Make deploy
 - [ ] Add english version
+- [ ] Lazy load for images and fonts

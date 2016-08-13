@@ -12,4 +12,5 @@ run: ## Run application
 
 build: ## Build with webpack
 	@ mkdir -p dist
-	@ ./node_modules/.bin/webpack -p
+	@ ./node_modules/.bin/webpack -p --progress --colors
+
