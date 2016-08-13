@@ -1,10 +1,14 @@
 larbreapages.fr
 ===
 
-Angular.js + Webpack + ES6 + Makefile + Font-awesome + normalize 
+Angular.js + Webpack + ES6 + Makefile + Font-awesome + normalize
 
-Start
+Run
 ---
 
-- `make run`
-- go to http://127.0.0.1:9000
+`make run`
+
+Deploy
+---
+
+`make deploy`
