@@ -2,3 +2,4 @@
 - [x] Make deploy
 - [ ] Add english version
 - [ ] Lazy load for images and fonts
+- [ ] Don't deploy if build failed
