@@ -1,6 +1,6 @@
-const HtmlWebpackPlugin = require('html-webpack-plugin');
-const ExtractTextPlugin = require('extract-text-webpack-plugin');
-const NgAnnotatePlugin = require('ng-annotate-webpack-plugin');
+import HtmlWebpackPlugin from 'html-webpack-plugin';
+import ExtractTextPlugin from 'extract-text-webpack-plugin';
+import NgAnnotatePlugin from 'ng-annotate-webpack-plugin';
 
 module.exports = {
     entry: {
