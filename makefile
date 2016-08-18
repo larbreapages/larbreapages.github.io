@@ -17,4 +17,5 @@ build: ## Build with webpack
 	@ mkdir -p dist
 	@ ./node_modules/.bin/webpack -p --progress --colors
 	@ cp robots.txt dist/
+	@ cp favicon.ico dist/
 
