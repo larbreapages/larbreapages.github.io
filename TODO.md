@@ -1,5 +1,6 @@
 - [x] Resolve problem render html
 - [x] Make deploy
+- [ ] Handle cache (add ressources ID)
 - [ ] Remove html minify
 - [ ] Open-source website on github.com
 - [ ] Add english version
