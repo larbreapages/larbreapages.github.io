@@ -1,8 +1,7 @@
 - [x] Resolve problem render html
-- [x] Make deploy
+- [x] Open-source website on github.com
 - [ ] Handle cache (add ressources ID)
 - [ ] Remove html minify
-- [ ] Open-source website on github.com
 - [ ] Add english version
 - [ ] Lazy load for images and fonts
 - [ ] Don't deploy if build failed
