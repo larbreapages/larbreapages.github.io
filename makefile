@@ -16,6 +16,12 @@ run: ## Run application
 build: ## Build with webpack
 	@ mkdir -p dist
 	@ ./node_modules/.bin/webpack -p --progress --colors
-	@ cp robots.txt dist/
-	@ cp favicon.ico dist/
+	@ cp src/robots.txt dist/
+	@ cp src/favicon.ico dist/
 
+deploy: build
+	@ git add dist && git commit -m "Deploy"
+	@ git subtree push --prefix dist origin gh-pages
+	@ git reset --soft HEAD~1
+	@ rm -rf dist/
+	@ git checkout dist/
