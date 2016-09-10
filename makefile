@@ -19,9 +19,10 @@ build: ## Build with webpack
 	@ cp src/robots.txt dist/
 	@ cp src/favicon.ico dist/
 
-deploy: build
+deploy: build ## Deploy application
 	@ git add dist && git commit -m "Deploy"
+	@ git push origin :gh-pages
 	@ git subtree push --prefix dist origin gh-pages
 	@ git reset --soft HEAD~1
-	@ rm -rf dist/
 	@ git checkout dist/
+	@ rm -rf dist/
