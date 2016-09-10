@@ -20,7 +20,7 @@ build: ## Build with webpack
 	@ cp src/favicon.ico dist/
 
 deploy: build ## Deploy application
-	@ echo 'larbreapages.com' > dist/CNAME
+	@ echo 'larbreapages.fr' > dist/CNAME
 	@ git add dist && git commit -m "Deploy"
 	@ git push origin :gh-pages
 	@ git subtree push --prefix dist origin gh-pages
