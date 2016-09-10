@@ -20,9 +20,10 @@ build: ## Build with webpack
 	@ cp src/favicon.ico dist/
 
 deploy: build ## Deploy application
+	@ echo 'larbreapages.com' > dist/CNAME
 	@ git add dist && git commit -m "Deploy"
 	@ git push origin :gh-pages
 	@ git subtree push --prefix dist origin gh-pages
 	@ git reset --soft HEAD~1
-	@ git checkout dist/
+	@ git reset HEAD dist
 	@ rm -rf dist/
