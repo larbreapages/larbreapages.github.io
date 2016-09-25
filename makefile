@@ -18,6 +18,7 @@ build: ## Build with webpack
 	@ ./node_modules/.bin/webpack -p --progress --colors
 	@ cp src/robots.txt dist/
 	@ cp src/favicon.ico dist/
+	@ cp src/sitemap.xml dist/
 
 deploy: build ## Deploy application
 	@ echo 'larbreapages.fr' > dist/CNAME
