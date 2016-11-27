@@ -1,13 +1,21 @@
-import angular from 'angular';
-import uiRouter from 'angular-ui-router';
+import $ from 'expose?$!expose?jQuery!jquery';
+import 'bootstrap';
+import 'slick-carousel/slick/slick.min.js';
 
-const app = angular.module('app', [uiRouter]);
-app.config(($stateProvider, $urlRouterProvider) => {
-    $urlRouterProvider.otherwise('/');
-    $stateProvider
-        .state('home', {
-            url: '/',
-            template: require('../partials/home.html'),
-        })
-    ;
+$(window).load(() => {
+    $('.slider img').show();
+    $('.slider').slick({
+        infinite: true,
+        slidesToShow: 2,
+        slidesToScroll: 3,
+        centerMode: true,
+        dots: true,
+        prevArrow: false,
+        nextArrow: false,
+        autoplay: true,
+        autoplaySpeed: 3000,
+        variableWidth: true,
+    });
+
+    $('[data-toggle="tooltip"]').tooltip();
 });
