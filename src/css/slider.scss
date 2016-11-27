@@ -1,0 +1,27 @@
+.slider {
+    $max-height: 315px;
+    height: $max-height + 3px;
+    border: 1px solid #ddd;
+    background-image: url('../images/loader.svg');
+    background-repeat: no-repeat;
+    background-position: center;
+
+    img {
+        display: none;
+        max-height: $max-height;
+    }
+
+    .slider-nav img {
+        border: 1px solid black;
+        max-height: 100px;
+        max-width: 200px;
+    }
+
+    .slick-prev::before, .slick-next::before {
+        color: black;
+    }
+
+    .slick-dots li button::before {
+        color: darkgoldenrod;
+    }
+}

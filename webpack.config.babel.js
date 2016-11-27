@@ -1,6 +1,5 @@
 import HtmlWebpackPlugin from 'html-webpack-plugin';
 import ExtractTextPlugin from 'extract-text-webpack-plugin';
-import NgAnnotatePlugin from 'ng-annotate-webpack-plugin';
 
 module.exports = {
     entry: {
@@ -16,10 +15,10 @@ module.exports = {
     module: {
         loaders: [
             { test: /\.html$/, loader: 'html' },
-            { test: /\.json$/, loader: 'json-loader' },
+            { test: /\.json$/, loader: 'json' },
             { test: /\.s?css$/, loader: ExtractTextPlugin.extract('css!sass') },
             {
-                test: /\.(png|jpg|gif|svg|woff2?|eot|otf|ttf)(\?.*)?$/,
+                test: /\.(png|ico|jpg|gif|svg|woff2?|eot|otf|ttf)(\?.*)?$/,
                 loader: 'url',
                 query: {
                     limit: 10000,
@@ -27,7 +26,7 @@ module.exports = {
                 },
             },
             {
-                test: /\.js$/,
+                test: /\.jsx?$/,
                 loader: 'babel',
                 exclude: /node_modules/,
             },
@@ -41,9 +40,6 @@ module.exports = {
         }),
         new ExtractTextPlugin('[name].css', {
             allChunks: false,
-        }),
-        new NgAnnotatePlugin({
-            add: true,
         }),
     ],
 };

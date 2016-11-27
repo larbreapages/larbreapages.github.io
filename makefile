@@ -2,7 +2,6 @@ install: ## Install application
 	@ npm i
 
 run: ## Run application
-	@ echo '* Start webpack dev server *'
 	@ NODE_ENV=development TARGET=web ./node_modules/.bin/webpack-dev-server \
 		-d \
 		--host=0.0.0.0 \
