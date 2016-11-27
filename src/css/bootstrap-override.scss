@@ -57,15 +57,21 @@ a {
 header {
     margin-top: 25px;
 
-    #logo h2 {
-        margin-bottom: 0px;
-        margin-top: 0px;
+    #logo {
+        display: flex;
+        align-items: flex-start;
+        justify-content: center;
 
-        a {
+        .small {
+            margin-top: 4px;
+        }
+
+        .url {
             font-family: GoodVibrations;
             font-size: 60px;
             color: grey;
             text-decoration: none;
+            align-self: center;
         }
     }
 }
