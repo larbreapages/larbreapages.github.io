@@ -60,8 +60,13 @@ header {
     #logo h2 {
         margin-bottom: 0px;
         margin-top: 0px;
-        font-family: GoodVibrations;
-        font-size: 60px;
+
+        a {
+            font-family: GoodVibrations;
+            font-size: 60px;
+            color: grey;
+            text-decoration: none;
+        }
     }
 }
 
