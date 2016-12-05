@@ -6,3 +6,7 @@
 - [ ] Lazy load for images and fonts
 - [ ] Don't deploy if build failed
 - [ ] Create SVG images
+- [ ] Balises H1, H2 for SEO
+- [ ] alt attribut for SEO
+- [ ] Make a speedtest
+- [ ] HTTPS
