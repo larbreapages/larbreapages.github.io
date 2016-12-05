@@ -1,7 +1,7 @@
 larbreapages.fr
 ===
 
-Angular.js + Webpack + ES6 + Makefile + Font-awesome + normalize
+React + Webpack + ES6 + Makefile + Font-awesome + normalize + SCSS + bootstrap
 
 Install
 ---
@@ -13,3 +13,7 @@ Run
 
 `make run`
 
+Deploy
+---
+
+`make deploy`

@@ -1,0 +1,195 @@
+$main-color: darkgoldenrod;
+$second-color: #84600C;
+$third-color: #936D02;
+
+// ALL
+
+* {
+    font-family: "raleway";
+}
+
+p, h1, h2, h3, h4, h5, h6, span, li, div {
+    color: grey;
+}
+
+@font-face {
+    font-family: "raleway";
+    src: url('../fonts/raleway.woff2');
+}
+
+@font-face {
+    font-family: "GoodVibrations";
+    src: url('../fonts/goodvibrationsscript.ttf');
+}
+
+a {
+    color: $main-color;
+
+    &:hover,
+    &:focus,
+    &:active{
+        color: $second-color;
+    }
+}
+
+.btn-primary, .btn-primary[disabled] {
+    background-color: $main-color;
+    border-color: $second-color;
+
+    &.btn-primary:hover,
+    &.btn-primary:focus,
+    &.btn-primary:active {
+        background-color: $second-color;
+        border-color: $third-color;
+    }
+}
+
+.row {
+    margin-bottom: 40px;
+}
+
+.gold {
+    color: darkgoldenrod;
+}
+
+// HEADER
+
+header {
+    margin-top: 25px;
+
+    #logo {
+        display: flex;
+        justify-content: center;
+
+        .small {
+            margin-top: 4px;
+        }
+
+        .url {
+            font-family: GoodVibrations;
+            font-size: 40px;
+            color: grey;
+            text-decoration: none;
+            align-self: center;
+        }
+
+        @media screen and (min-width: 768px) {
+            .url {
+                font-size: 60px;
+            }
+        }
+    }
+}
+
+// CONTAINER
+
+.container {
+    fieldset {
+        border: 1px solid #ddd;
+        border-radius: 4px;
+        padding: 25px 1.4em 1.4em 1.4em !important;
+
+        legend {
+            color: $main-color;
+            font-size: 30px;
+            text-transform: uppercase;
+            padding:0 20px;
+            border-bottom:none;
+            width: auto;
+            margin-bottom: 0px;
+        }
+
+        .jumbotron {
+            margin-bottom: 0px;
+        }
+    }
+
+
+    #services {
+        h4 {
+            font-weight: bold;
+            font-size: 17px;
+        }
+
+        .fa:hover {
+            cursor: pointer;
+        }
+    }
+
+    #values {
+        ul {
+            list-style: none;
+            padding:0;
+            margin:0;
+        }
+
+        li:before {
+            content: "• ";
+            color: $main-color;
+            font-weight: bold;
+            font-family: monospace;
+        }
+
+        li {
+            text-align: justify;
+            margin-bottom: 20px;
+        }
+
+        @media screen and (min-width: 768px) {
+            fieldset {
+                min-height: 269px;
+            }
+        }
+    }
+
+    #bookbuilder {
+        .soon {
+            font-size: 36px;
+        }
+
+        @media screen and (min-width: 768px) {
+            .soon {
+                font-size: 63px;
+            }
+        }
+    }
+}
+
+// FOOTER
+
+footer {
+    margin-bottom: 50px;
+}
+
+// ICONS
+
+.etsy{
+    width: 13px;
+    height: 13px;
+    margin: 0 0 2px 0;
+}
+
+.alittlemarket {
+    width: 14px;
+    height: 14px;
+    margin: 0 0 2px -1px;
+}
+
+.fa-infinity:before {
+    content: '\221E';
+    font-size: 130px;
+    font-weight: bold;
+}
+
+.fa {
+    color: $main-color;
+}
+
+.fi-crown::before,
+.fi-torsos-male-female::before,
+.fi-arrows-expand::before {
+    font-size: 70px;
+}
+.fi-crown, .fi-torsos-male-female, .fi-arrows-expand {
+    color: darkgoldenrod;
+}
