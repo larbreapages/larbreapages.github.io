@@ -114,6 +114,12 @@ header {
         .fa:hover {
             cursor: pointer;
         }
+
+        @media screen and (min-width: 768px) {
+            fieldset {
+                min-height: 288px;
+            }
+        }
     }
 
     #values {
@@ -132,12 +138,6 @@ header {
 
         li {
             margin-bottom: 20px;
-        }
-
-        @media screen and (min-width: 768px) {
-            fieldset {
-                min-height: 269px;
-            }
         }
     }
 
