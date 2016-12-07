@@ -152,6 +152,27 @@ header {
             }
         }
     }
+
+    @media screen and (min-width: 992px) {
+        fieldset legend {
+            font-size: 24px;
+        }
+
+        #values fieldset legend {
+            padding: 0px 3px;
+        }
+    }
+
+    @media screen and (min-width: 1200px) {
+        fieldset legend {
+            font-size: 29px;
+            padding: 0px 20px;
+        }
+
+        #values fieldset legend {
+            padding: 0px 10px;
+        }
+    }
 }
 
 // FOOTER
