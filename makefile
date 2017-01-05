@@ -13,7 +13,7 @@ run: ## Run application
 		--inline
 
 build: ## Build with webpack
-	@ rm -r dist
+	@ rm -rf dist
 	@ mkdir -p dist
 	@ ./node_modules/.bin/webpack -p --progress --colors
 	@ cp src/robots.txt dist/
@@ -22,6 +22,9 @@ build: ## Build with webpack
 	@ cp src/sitemaps.html dist/
 
 deploy: build ## Deploy application
+	scp -p dist/* larbreapages:~/www/larbreapages.fr/
+
+deploy-github: build ## Deploy application
 	@ echo 'larbreapages.fr' > dist/CNAME
 	@ git add dist && git commit -m "Deploy"
 	@ git push origin :gh-pages
