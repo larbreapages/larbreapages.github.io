@@ -19,7 +19,7 @@ build: ## Build with webpack
 	@ cp src/robots.txt dist/
 	@ cp src/favicon.ico dist/
 	@ cp src/sitemap.xml dist/
-	@ cp src/sitemaps.html dist/
+	@ cp src/sitemap.html dist/
 
 deploy: build ## Deploy application
 	scp -p dist/* larbreapages:~/www/larbreapages.fr/
