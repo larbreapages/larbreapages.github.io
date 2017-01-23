@@ -25,26 +25,3 @@ build: ## Build with webpack
 	@ cp src/favicon.ico public/
 	@ cp src/sitemap.xml public/
 	@ cp src/sitemap.html public/
-
-# deploy: build ## Deploy application
-	# scp -p public/* larbreapages:~/www/larbreapages.fr/
-
-# deploy-github: build ## Deploy application
-	# @ echo 'larbreapages.fr' > public/CNAME
-	# @ git add public && git commit -m "Deploy"
-	# @ git push origin :gh-pages
-	# @ git subtree push --prefix public origin gh-pages
-	# @ git reset --soft HEAD~1
-	# @ git reset HEAD public
-	# @ rm -rf public/
-
-#run: ## Run application
-	#@ NODE_ENV=development TARGET=web ./node_modules/.bin/webpack-dev-server \
-		#-d \
-		#--host=0.0.0.0 \
-		#--port 9000 \
-		#--colors \
-		#--progress \
-		#--no-info \
-		#--hot \
-		#--inline
