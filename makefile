@@ -1,19 +1,21 @@
 PORT := 9000
+NODE_VERSION := 4.6.2
+NODE_BIN := docker run -it --rm -v ${PWD}:/usr/src/app -w /usr/src/app node:${NODE_VERSION}
 
 install: ## Install application
-	@ docker run -it --rm -v ${PWD}:/usr/src/app -w /usr/src/app node:4 npm i
+	@ $(NODE_BIN) npm i
 
 build: ## Build with webpack
 	@ rm -rf public
 	@ mkdir -p public
-	@ ./node_modules/.bin/webpack -p --progress --colors
+	@ $(NODE_BIN) ./node_modules/.bin/webpack -p --progress --colors
 	@ cp src/robots.txt public/
 	@ cp src/favicon.ico public/
 	@ cp src/sitemap.xml public/
 	@ cp src/sitemap.html public/
 
 watch: ## Watch
-	@ ./node_modules/.bin/webpack --watch -d
+	@ $(NODE_BIN) ./node_modules/.bin/webpack --watch -d
 
 run: build ## Run application
 	@ docker run -it --rm --name larbreapages.fr \
@@ -23,6 +25,6 @@ run: build ## Run application
 	-e PORT=${PORT} \
 	-v ${PWD}:/usr/src/app \
 	-w /usr/src/app \
-	-p ${PORT}:${PORT} node:4 \
+	-p ${PORT}:${PORT} node:${NODE_VERSION} \
 	./node_modules/.bin/babel-node src/js/server.js
 
