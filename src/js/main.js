@@ -1,6 +1,7 @@
 import $ from 'expose?$!expose?jQuery!jquery';
 import 'bootstrap';
 import 'slick-carousel/slick/slick.min.js';
+import 'bootstrap-validator';
 
 $(window).load(() => {
     $('.slider img').show();
@@ -18,4 +19,16 @@ $(window).load(() => {
     });
 
     $('[data-toggle="tooltip"]').tooltip();
+
+    $('#newsletterForm').validator().on('submit', (e) => {
+        if (!e.isDefaultPrevented()) {
+            const email = $('input[type=email]').val();
+            $.post('/newsletter', { email }).done(() => {
+                $('.alert').removeClass('hidden');
+                $('html,body').scrollTop(0);
+            });
+        }
+        $('input[type=email]').val('');
+        e.preventDefault();
+    });
 });
