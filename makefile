@@ -1,7 +1,7 @@
 .PHONY: install build watch run
 
 PORT := 9000
-NODE_VERSION := 4.6.2
+NODE_VERSION := 4.5.0
 NODE_BIN := docker run -it --rm -v ${PWD}:/usr/src/app -w /usr/src/app node:${NODE_VERSION}
 
 install: ## Install application
