@@ -42,6 +42,9 @@
 
         <div class="row">
             <div class="col-md-12">
+                <div class="alert alert-info hidden" role="alert">Merci ! Votre demande a bien été prise en compte.</div>
+            </div>
+            <div class="col-md-12">
                 <div class="slider">
                     <div><img src="./images/livre_9.png" alt="livre"/></div>
                     <div><img src="./images/livre_6.png" alt="livre"/></div>
@@ -96,8 +99,13 @@
                     <legend align="center">CRÉEZ VOTRE CARNET</legend>
                     <div class="jumbotron" align="center">
                         <div class="soon">Bientôt !</div>
-                        <p>Ce module est en cours de construction.</p>
-                        <p><a class="btn btn-primary btn-lg" role="button" disabled="disabled">Je créer mon carnet</a></p>
+                        <p>Soyez prêt, ce module arrive très prochainement ! <br/>Entrez votre e-mail pour être informé de sa sortie.</p>
+                        <form action="/newsletter" method="POST" class="form-inline" id="newsletterForm" role="form" data-toggle="validator">
+                            <div class="form-group">
+                                <input type="email" name="email" class="form-control" placeholder="Votre e-mail" required="required"/>
+                                <button type="submit" class="btn btn-primary">S'inscrire</button>
+                            </div>
+                        </form>
                     </div>
                 </fieldset>
             </div>
