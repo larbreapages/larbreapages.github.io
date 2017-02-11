@@ -13,7 +13,3 @@ Run
 
 `make run`
 
-Deploy
----
-
-`make deploy`
