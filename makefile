@@ -6,6 +6,7 @@ NODE_BIN := docker run -it --rm -v ${PWD}:/usr/src/app -w /usr/src/app node:${NO
 
 install: ## Install application
 	@ $(NODE_BIN) npm i
+	@ make build
 
 build: ## Build with webpack
 	@ rm -rf public
