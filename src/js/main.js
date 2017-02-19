@@ -1,7 +1,8 @@
 import $ from 'expose?$!expose?jQuery!jquery';
 import 'bootstrap';
-import 'slick-carousel/slick/slick.min.js';
+import 'slick-carousel/slick/slick.min';
 import 'bootstrap-validator';
+import 'bookbuilder';
 
 $(window).load(() => {
     $('.slider img').show();
