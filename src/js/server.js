@@ -22,9 +22,12 @@ app.post('/newsletter', (req, res) => {
 // serve static stuff
 app.use(express.static(path.join(__dirname, '../../public')));
 
-// send all requests to index.html so browserHistory works
-app.get('*', (req, res) => {
+app.get('/', (req, res) => {
     res.sendFile(path.join(__dirname, '../../public', 'index.html'));
+});
+
+app.get('*', (req, res) => {
+    res.status(404).send('Not found');
 });
 
 app.listen(PORT, () => {
