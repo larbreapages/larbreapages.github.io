@@ -3,12 +3,15 @@ import path from 'path';
 import compression from 'compression';
 import bodyParser from 'body-parser';
 import fs from 'fs';
+import payment from 'bookbuilder/src/js/payment.js';
 
 const app = express();
 const PORT = process.env.PORT || 9000;
 app.use(compression());
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
+
+app.use(payment);
 
 app.post('/newsletter', (req, res) => {
     const email = req.body.email;
