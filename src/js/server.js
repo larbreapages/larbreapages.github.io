@@ -3,7 +3,7 @@ import path from 'path';
 import compression from 'compression';
 import bodyParser from 'body-parser';
 import fs from 'fs';
-import payment from 'bookbuilder/src/js/payment.js';
+import payment from 'bookbuilder/src/js/payment';
 
 const app = express();
 const PORT = process.env.PORT || 9000;

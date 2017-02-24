@@ -15,21 +15,16 @@ module.exports = {
     },
     module: {
         loaders: [
-            { test: /\.html$/, loader: 'html' },
-            { test: /\.json$/, loader: 'json' },
-            { test: /\.s?css$/, loader: ExtractTextPlugin.extract('css!sass') },
+            { test: /\.html$/, loader: 'html-loader' },
+            { test: /\.s?css$/, use: ExtractTextPlugin.extract({ fallback: 'style-loader', use: ['css-loader', 'sass-loader'] }) },
+            { test: /\.jsx?$/, use: 'babel-loader', exclude: /node_modules/ },
             {
                 test: /\.(png|ico|jpg|gif|svg|woff2?|eot|otf|ttf)(\?.*)?$/,
-                loader: 'url',
+                loader: 'url-loader',
                 query: {
                     limit: 10000,
                     name: '[name]-[hash:7].[ext]',
                 },
-            },
-            {
-                test: /\.jsx?$/,
-                loader: 'babel',
-                exclude: /node_modules/,
             },
         ],
     },
@@ -39,9 +34,7 @@ module.exports = {
             template: `${__dirname}/src/index.html`,
             hash: true,
         }),
-        new ExtractTextPlugin('[name].css', {
-            allChunks: false,
-        }),
+        new ExtractTextPlugin({ filename: '[name].css', allChunks: false }),
         new CopyWebpackPlugin([
             { from: 'node_modules/bookbuilder/dist/*.png', to: `${__dirname}/public/`, flatten: true },
         ]),

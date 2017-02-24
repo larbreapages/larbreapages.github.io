@@ -1,4 +1,4 @@
-import $ from 'expose?$!expose?jQuery!jquery';
+import $ from 'expose-loader?$!expose-loader?jQuery!jquery';
 import 'bootstrap';
 import 'slick-carousel/slick/slick.min';
 import 'bootstrap-validator';
