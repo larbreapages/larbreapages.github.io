@@ -16,3 +16,9 @@ run: ## Run application
 
 dev: ## Run dev environment
 	@ NODE_ENV=development ./node_modules/.bin/babel-node src/js/server.js & make watch
+
+lint:
+	@ ./node_modules/.bin/eslint src/
+
+lint-fix:
+	@ ./node_modules/.bin/eslint --fix src/
