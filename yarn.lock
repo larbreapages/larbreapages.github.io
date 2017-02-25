@@ -1008,8 +1008,9 @@ body-parser@^1.15.2, body-parser@^1.16.1:
     raw-body "~2.2.0"
     type-is "~1.6.14"
 
-"bookbuilder@file:/home/jcherqui/dev/bookbuilder":
-  version "0.1.0"
+bookbuilder@^0.1.1:
+  version "0.1.1"
+  resolved "https://registry.yarnpkg.com/bookbuilder/-/bookbuilder-0.1.1.tgz#4d0ab309f6ae8e71d3c1b2ae366eea6177d85a0d"
   dependencies:
     antd "^2.7.2"
     body-parser "^1.15.2"
@@ -1479,9 +1480,9 @@ concat-stream@^1.4.6:
     readable-stream "^2.2.2"
     typedarray "^0.0.6"
 
-"config@git+https://github.com/jcherqui/node-config":
+"config@git+https://github.com/jcherqui/node-config.git":
   version "1.20.2"
-  resolved "git+https://github.com/jcherqui/node-config#321a98d1dabd8e7e8ee3d6e17e7369d78329243a"
+  resolved "git+https://github.com/jcherqui/node-config.git#321a98d1dabd8e7e8ee3d6e17e7369d78329243a"
   dependencies:
     json5 "0.4.0"
 
@@ -2370,10 +2371,10 @@ file-entry-cache@^2.0.0:
     object-assign "^4.0.1"
 
 file-loader@^0.10.0:
-  version "0.10.0"
-  resolved "https://registry.yarnpkg.com/file-loader/-/file-loader-0.10.0.tgz#bbe6db7474ac92c7f54fdc197cf547e98b6b8e12"
+  version "0.10.1"
+  resolved "https://registry.yarnpkg.com/file-loader/-/file-loader-0.10.1.tgz#815034119891fc6441fb5a64c11bc93c22ddd842"
   dependencies:
-    loader-utils "~0.2.5"
+    loader-utils "^1.0.2"
 
 filename-regex@^2.0.0:
   version "2.0.0"
@@ -3339,7 +3340,7 @@ loader-runner@^2.3.0:
   version "2.3.0"
   resolved "https://registry.yarnpkg.com/loader-runner/-/loader-runner-2.3.0.tgz#f482aea82d543e07921700d5a46ef26fdac6b8a2"
 
-loader-utils@^0.2.15, loader-utils@^0.2.16, loader-utils@^0.2.5, loader-utils@~0.2.5:
+loader-utils@^0.2.15, loader-utils@^0.2.16, loader-utils@^0.2.5:
   version "0.2.17"
   resolved "https://registry.yarnpkg.com/loader-utils/-/loader-utils-0.2.17.tgz#f86e6374d43205a6e6c60e9196f17c0299bfb348"
   dependencies:
