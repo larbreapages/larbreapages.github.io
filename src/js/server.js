@@ -3,7 +3,7 @@ import path from 'path';
 import compression from 'compression';
 import bodyParser from 'body-parser';
 import fs from 'fs';
-import payment from 'bookbuilder/src/js/payment';
+import payment from 'bookbuilder/dist/payment';
 
 const app = express();
 const PORT = process.env.PORT || 9000;
@@ -22,12 +22,17 @@ app.post('/newsletter', (req, res) => {
     return res.send({ status: 'OK' });
 });
 
-// serve static stuff
-app.use(express.static(path.join(__dirname, '../../public')));
-
-app.get('/', (req, res) => {
-    res.sendFile(path.join(__dirname, '../../public', 'index.html'));
-});
+if (process.env.NODE_ENV === 'production') {
+    app.use(express.static(path.join(__dirname)));
+    app.get('/', (req, res) => {
+        res.sendFile(path.join(__dirname, 'index.html'));
+    });
+} else {
+    app.use(express.static(path.join(__dirname, '../../public')));
+    app.get('/', (req, res) => {
+        res.sendFile(path.join(__dirname, '../../public', 'index.html'));
+    });
+}
 
 app.get('*', (req, res) => {
     res.status(404).send('Not found');
