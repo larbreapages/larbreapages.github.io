@@ -1,6 +1,7 @@
 import HtmlWebpackPlugin from 'html-webpack-plugin';
 import ExtractTextPlugin from 'extract-text-webpack-plugin';
 import CopyWebpackPlugin from 'copy-webpack-plugin';
+import StringReplacePlugin from 'string-replace-webpack-plugin';
 
 module.exports = {
     entry: {
@@ -25,6 +26,15 @@ module.exports = {
                     limit: 10000,
                     name: '[name]-[hash:7].[ext]',
                 },
+            },
+            {
+                test: /\.js$/,
+                loader: StringReplacePlugin.replace({
+                    replacements: [
+                        { pattern: /global\.MutationObserver/g, replacement: () => 'window.MutationObserver' },
+                        { pattern: /global\.WebKitMutationObserver/g, replacement: () => 'window.WebKitMutationObserver' },
+                    ],
+                }),
             },
         ],
     },
