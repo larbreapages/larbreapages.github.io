@@ -2,8 +2,6 @@
 
 PORT := 9000
 NODE_VERSION := 4.5.0
-MAIL_PASSWORD := "MYPASS"
-STRIPE_SECRET_KEY := "MYPASS"
 
 install: ## Install application
 	@ yarn --ignore-engines
@@ -20,7 +18,7 @@ run: ## Run application
 	@ NODE_ENV=production node public/server.js
 
 dev: ## Run dev environment
-	@ NODE_ENV=development ./node_modules/.bin/babel-node src/js/server.js & make watch & make browser-sync
+	@ NODE_ENV=development ./node_modules/.bin/pm2 start --watch src/ --no-daemon src/js/server.js --interpreter ./node_modules/.bin/babel-node & make watch & make browser-sync
 
 browser-sync:
 	@ ./node_modules/.bin/browser-sync start --proxy "http://0.0.0.0:${PORT}" --files "public/*"
