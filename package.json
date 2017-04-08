@@ -5,6 +5,13 @@
     "type": "git",
     "url": "git+https://github.com/larbreapages/larbreapages.git"
   },
+  "scripts": {
+      "start": "make run"
+  },
+  "engines": {
+      "node": "4.5.0",
+      "npm": "2.15.9"
+  },
   "dependencies": {
     "body-parser": "^1.16.1",
     "bookbuilder": "^0.2.4",
