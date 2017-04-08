@@ -29,16 +29,5 @@ lint:
 lint-fix:
 	@ ./node_modules/.bin/eslint --fix src/
 
-deploy: ## Run production application
-	@ docker run -it -d --name larbreapages.fr \
-	-e VIRTUAL_HOST='larbreapages.fr,www.larbreapages.fr' \
-	-e LETSENCRYPT_HOST='larbreapages.fr,www.larbreapages.fr' \
-	-e LETSENCRYPT_EMAIL=contact@larbreapages.fr \
-	-e PORT=${PORT} \
-	-e NODE_ENV=production \
-	-e MAIL_PASSWORD=${MAIL_PASSWORD} \
-	-e STRIPE_SECRET_KEY=${STRIPE_SECRET_KEY} \
-	-v ${PWD}:/usr/src/app \
-	-w /usr/src/app \
-	-p ${PORT}:${PORT} node:${NODE_VERSION} \
-	./node_modules/.bin/pm2 --no-daemon start public/server.js --watch
+deploy: build ## Run production application
+	tar --exclude='node_modules' --exclude='.git' -c . $$* | ssh larbreapages "tar:in larbreapages.fr"
