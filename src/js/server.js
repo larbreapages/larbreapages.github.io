@@ -3,7 +3,7 @@ import path from 'path';
 import compression from 'compression';
 import bodyParser from 'body-parser';
 import fs from 'fs';
-import payment from 'bookbuilder/dist/payment';
+import payment from 'bookbuilder/dist/server/payment';
 
 const app = express();
 const PORT = process.env.PORT || 9000;
@@ -12,15 +12,6 @@ app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
 
 app.use(payment);
-
-app.post('/newsletter', (req, res) => {
-    const email = req.body.email;
-    const regex = /\S+@\S+\.\S+/;
-    if (regex.test(email)) {
-        fs.appendFile('newsletter.csv', `${req.body.email}\n`);
-    }
-    return res.send({ status: 'OK' });
-});
 
 if (process.env.NODE_ENV === 'production') {
     app.use(express.static(path.join(__dirname)));

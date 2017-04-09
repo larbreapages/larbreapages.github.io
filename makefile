@@ -1,7 +1,6 @@
 .PHONY: install build watch run
 
 PORT := 9000
-NODE_VERSION := 4.5.0
 
 install: ## Install application
 	@ yarn --ignore-engines
@@ -20,6 +19,9 @@ run: ## Run application
 dev: ## Run dev environment
 	@ NODE_ENV=development ./node_modules/.bin/pm2 start --watch src/ --no-daemon src/js/server.js --interpreter ./node_modules/.bin/babel-node & make watch & make browser-sync
 
+deploy: build ## Run production application
+	@ tar --exclude='node_modules' --exclude='.git' -cv . $$* | ssh larbreapages "tar:in larbreapages.fr"
+
 browser-sync:
 	@ ./node_modules/.bin/browser-sync start --proxy "http://0.0.0.0:${PORT}" --files "public/*"
 
@@ -28,6 +30,3 @@ lint:
 
 lint-fix:
 	@ ./node_modules/.bin/eslint --fix src/
-
-deploy: build ## Run production application
-	tar --exclude='node_modules' --exclude='.git' -c . $$* | ssh larbreapages "tar:in larbreapages.fr"
