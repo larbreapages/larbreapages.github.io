@@ -1,8 +1,8 @@
+import 'babel-polyfill';
 import express from 'express';
 import path from 'path';
 import compression from 'compression';
 import bodyParser from 'body-parser';
-import fs from 'fs';
 import payment from 'bookbuilder/dist/server/payment';
 
 const app = express();
