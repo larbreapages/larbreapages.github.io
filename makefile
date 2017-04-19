@@ -6,7 +6,7 @@ install: ## Install application
 	@ yarn --ignore-engines
 
 build: ## Build with webpack
-	@ mkdir -p public && cp src/robots.txt src/favicon.ico src/sitemap.xml src/sitemap.html public/
+	@ rm -rf public && mkdir -p public && cp src/robots.txt src/favicon.ico src/sitemap.xml src/sitemap.html public/
 	@ NODE_ENV=production ./node_modules/.bin/babel --minified --compact true -d public/ src/js --only server.js
 	@ NODE_ENV=production ./node_modules/.bin/webpack -p --progress --colors
 
