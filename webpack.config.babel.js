@@ -1,6 +1,5 @@
 import HtmlWebpackPlugin from 'html-webpack-plugin';
 import ExtractTextPlugin from 'extract-text-webpack-plugin';
-import CopyWebpackPlugin from 'copy-webpack-plugin';
 import StringReplacePlugin from 'string-replace-webpack-plugin';
 
 module.exports = {
@@ -45,8 +44,5 @@ module.exports = {
             hash: true,
         }),
         new ExtractTextPlugin({ filename: '[name].css', allChunks: false }),
-        new CopyWebpackPlugin([
-            { from: 'node_modules/bookbuilder/dist/*.png', to: `${__dirname}/public/`, flatten: true },
-        ]),
     ],
 };
