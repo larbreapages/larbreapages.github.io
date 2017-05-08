@@ -1,8 +1,14 @@
-@import "~bookbuilder/dist/index.css";
 @import "~normalize.css/normalize.css";
-@import "~bootstrap/dist/css/bootstrap.min.css";
 @import "~font-awesome/css/font-awesome.min.css";
-@import "~slick-carousel/slick/slick.css";
-@import "~slick-carousel/slick/slick-theme.css";
-@import "bootstrap-override.scss";
-@import "slider.scss";
+$primary: darkgoldenrod;
+@import "~bulma/bulma.sass";
+
+.hero {
+    width:100%;
+    background: linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) ), url('https://images.unsplash.com/photo-1479142506502-19b3a3b7ff33?dpr=2&auto=format&fit=crop&w=800&q=80&cs=tinysrgb&crop=&bg=');
+    background-position:center top;
+}
+
+.logo {
+    width: 150px;
+}

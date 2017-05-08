@@ -6,11 +6,11 @@
     "url": "git+https://github.com/larbreapages/larbreapages.git"
   },
   "scripts": {
-      "start": "make run"
+    "start": "make run"
   },
   "engines": {
-      "node": "4.5.0",
-      "npm": "2.15.9"
+    "node": "4.5.0",
+    "npm": "2.15.9"
   },
   "dependencies": {
     "babel-polyfill": "^6.23.0",
@@ -18,6 +18,7 @@
     "bookbuilder": "^0.3.4",
     "bootstrap": "^3.3.7",
     "bootstrap-validator": "^0.11.9",
+    "bulma": "^0.4.1",
     "compression": "^1.6.2",
     "express": "^4.14.1",
     "jquery": "^2.2.4",
