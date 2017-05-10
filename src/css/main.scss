@@ -5,8 +5,9 @@
 
 .hero {
     width:100%;
-    background: linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) ), url('https://images.unsplash.com/photo-1479142506502-19b3a3b7ff33?dpr=2&auto=format&fit=crop&w=800&q=80&cs=tinysrgb');
-    background-position:center top;
+    background: linear-gradient( rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7) ), url('../images/background.jpg');
+    background-position:center center;
+    background-size: cover;
 }
 
 .logo {
