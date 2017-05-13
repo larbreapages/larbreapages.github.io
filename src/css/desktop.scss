@@ -1,0 +1,34 @@
+@include tablet {
+    .logo {
+        width: 200px;
+    }
+
+    .hero-head .nav-item {
+        font-size: 1.35rem;
+    }
+
+    .subtitle {
+        font-size: 1.65rem;
+    }
+
+    q {
+        font-size: 1.45rem;
+    }
+
+    h1.logo-title {
+        font-size: 4rem;
+    }
+
+    h1.title {
+        font-size: $size-3;
+    }
+
+    .button {
+        font-size: 1.45rem;
+    }
+
+    .border {
+        @include border;
+    }
+}
+

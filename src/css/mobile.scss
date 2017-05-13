@@ -1,0 +1,75 @@
+::selection {
+    background: $primary;
+}
+
+@font-face {
+    font-family: "GoodVibrations";
+    src: url('../fonts/goodvibrationsscript.ttf');
+}
+
+.hero {
+    width:100%;
+    background: linear-gradient( rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6) ), url('../images/background.jpg');
+    background-position:center center;
+    background-size: cover;
+}
+
+h1.logo-title {
+    margin-bottom: 0rem!important;
+}
+
+.logo {
+    width: 125px;
+    margin-bottom: -15px;
+}
+
+h1.logo-title {
+    font-family: "GoodVibrations";
+    color: $primary;
+    font-size: 40px;
+}
+
+.hero-foot .has-text-right {
+    margin-right: 15px;
+}
+
+.hero-foot a:not(:last-child) {
+    margin-right: 5px;
+}
+
+.hero-foot a:hover {
+    color: $primary!important;
+}
+
+h1.title {
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    font-size: 1.35rem;
+}
+
+p.quote {
+    margin-bottom: 1.5rem!important;
+}
+
+// Buttons
+
+.hero-body .button {
+    margin-top: 0px;
+    margin-bottom: 10px;
+    border-radius: 0px;
+}
+
+.hero-body a.button:last-child {
+    margin-left: 10px;
+}
+
+.button.is-primary.is-inverted:hover {
+    color: $primary;
+    border: 1px solid $primary;
+}
+
+.button.is-primary.is-inverted {
+    background-color:transparent;
+    color: white;
+    border: 1px solid white;
+}
