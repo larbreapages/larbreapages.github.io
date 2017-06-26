@@ -14,10 +14,10 @@ watch: ## Watch
 	@ ./node_modules/.bin/webpack --watch -d
 
 run: ## Run application
-	@ NODE_ENV=production node public/server.js
+	@ PORT=${PORT} NODE_ENV=production node public/server.js
 
 dev: ## Run dev environment
-	@ NODE_ENV=development ./node_modules/.bin/pm2 start --watch src/ --no-daemon src/js/server.js --interpreter ./node_modules/.bin/babel-node & make watch & make browser-sync
+	@ PORT=${PORT} NODE_ENV=development ./node_modules/.bin/pm2 start --watch src/ --no-daemon src/js/server.js --interpreter ./node_modules/.bin/babel-node & make watch
 
 deploy: build ## Run production application
 	@ tar --exclude='node_modules' --exclude='.git' -cv . $$* | ssh larbreapages "tar:in v3.larbreapages.fr"

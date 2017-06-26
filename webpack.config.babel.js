@@ -1,6 +1,7 @@
 import HtmlWebpackPlugin from 'html-webpack-plugin';
 import ExtractTextPlugin from 'extract-text-webpack-plugin';
 import StringReplacePlugin from 'string-replace-webpack-plugin';
+import BrowserSyncPlugin from 'browser-sync-webpack-plugin';
 
 module.exports = {
     entry: {
@@ -44,5 +45,10 @@ module.exports = {
             hash: true,
         }),
         new ExtractTextPlugin({ filename: '[name].css', allChunks: false }),
+        new BrowserSyncPlugin({
+            host: 'localhost',
+            port: 3000,
+            server: { baseDir: ['public'] },
+        }),
     ],
 };

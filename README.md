@@ -1,7 +1,7 @@
 larbreapages.fr
 ===
 
-Express + Webpack + Docker + ES6 + Makefile + Font-awesome + normalize + SCSS + bootstrap
+Express + Webpack + ES6 + Makefile + Font-awesome + normalize + SCSS + bulma
 
 Install
 ---
