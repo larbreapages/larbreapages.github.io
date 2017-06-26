@@ -8,5 +8,8 @@
       "no-param-reassign": [0],
       "react/jsx-indent-props": [2, 4],
       "import/no-extraneous-dependencies": [0]
+  },
+  "env": {
+      "browser": true
   }
 }

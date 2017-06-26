@@ -1,5 +1,6 @@
 ::selection {
     background: $primary;
+    color: white;
 }
 
 @font-face {
@@ -72,4 +73,17 @@ p.quote {
     background-color:transparent;
     color: white;
     border: 1px solid white;
+}
+
+// Navbar
+
+.nav {
+    position: fixed;
+    width: 100%;
+    z-index: 100;
+    overflow: hidden;
+}
+
+.nav-left::-webkit-scrollbar {
+    display: none;
 }
