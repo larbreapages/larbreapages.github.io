@@ -87,3 +87,65 @@ p.quote {
 .nav-left::-webkit-scrollbar {
     display: none;
 }
+
+h1 {
+    font-size: $size-1;
+    margin-bottom: 20px;
+}
+
+h2 {
+    font-size: $size-2;
+}
+
+h3 {
+    font-size: $size-3;
+}
+
+h4 {
+    font-size: $size-4;
+}
+
+// Portfolio
+
+#portfolio {
+  display: flex;
+  flex-wrap: wrap;
+  margin-left: 5px;
+}
+
+#portfolio::after {
+  content: '';
+  flex-grow: 999999999;
+}
+
+#portfolio div {
+  flex-grow: 1;
+  margin-right: 5px;
+  margin-bottom: 5px;
+  height: 100px;
+}
+
+#portfolio img {
+  height: 100px;
+  object-fit: cover;
+  max-width: 100%;
+  min-width: 100%;
+  vertical-align: bottom;
+  border: 1px solid #ddd;
+}
+
+.fa-4x {
+    font-size: 4em!important;
+}
+
+.is-circle {
+    border-radius: 50%;
+}
+
+.card {
+    margin: 5px;
+}
+
+.footer {
+    padding: 3rem 1.5rem 2rem;
+}

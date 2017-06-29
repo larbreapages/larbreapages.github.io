@@ -30,5 +30,17 @@
     .border {
         @include border;
     }
+
+    #portfolio div {
+        height: 250px;
+    }
+
+    #portfolio img {
+        height: 250px;
+    }
+
+    .card {
+        margin: 0px;
+    }
 }
 
