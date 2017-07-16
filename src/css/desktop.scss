@@ -31,12 +31,8 @@
         @include border;
     }
 
-    #portfolio div {
-        height: 250px;
-    }
-
-    #portfolio img {
-        height: 250px;
+    #portfolio div, #portfolio img {
+        height: 200px;
     }
 
     .card {
@@ -47,12 +43,21 @@
         text-align: inherit;
     }
 
-    #contact iframe {
-        width: 500px;
-    }
-
     section {
         margin-bottom: 50px;
+    }
+
+    .hero-body .subtitle {
+        margin-bottom: 0px;
+    }
+
+    .hero-body p {
+        font-size: 1.45rem;
+        margin: 10px 0;
+    }
+
+    .hero-body .buttons {
+        margin-top: 20px;
     }
 }
 

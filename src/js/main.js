@@ -1,5 +1,6 @@
 console.log('Welcome to larbreapages.fr');
 
+// Move menu during scroll
 const getYPosition = el => el.getBoundingClientRect().top + window.scrollY;
 
 window.addEventListener('scroll', () => {
@@ -13,3 +14,17 @@ window.addEventListener('scroll', () => {
         document.querySelector('.nav').style.backgroundColor = 'inherit';
     }
 });
+
+// Tab
+
+const selectTab = (tab) => {
+    Array.prototype.map.call(document.querySelectorAll('#portfolio div'), el => el.classList.add('hide'));
+    Array.prototype.map.call(document.getElementsByClassName(tab), el => el.classList.remove('hide'));
+    Array.prototype.map.call(document.querySelectorAll('.tabs ul li'), el => el.classList.remove('is-active'));
+};
+
+[].forEach.call(document.querySelectorAll('.tabs ul li'), e => e.addEventListener('click', () => {
+    const currentTab = e.classList[0];
+    selectTab(currentTab);
+    e.classList.add('is-active');
+}));

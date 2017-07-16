@@ -147,6 +147,7 @@ h4 {
 
 #contact iframe {
     width: 100%;
+    padding: 0px 10px;
 }
 
 #services .fa {
@@ -163,4 +164,8 @@ h4 {
 
 .footer {
     padding: 3rem 1.5rem 2rem;
+}
+
+.hide {
+    display: none;
 }
