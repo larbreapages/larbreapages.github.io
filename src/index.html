@@ -26,7 +26,7 @@
 	<!-- End Piwik Code -->
 </head>
 <body>
-    <section class="hero is-fullheight is-dark">
+    <section id="home" class="hero is-fullheight is-dark">
         <div class="hero-head">
             <div class="nav">
                 <div class="container">
@@ -37,15 +37,17 @@
                         </a>
                     </div>
                     <div class="nav-right nav-menu">
-                        <a class="nav-item is-tab is-hidden-mobile is-active" href="#">
+                        <a class="nav-item is-tab is-hidden-mobile is-active" href="#home">
                             <span class="icon">
                                 <i class="fa fa-home"></i>
                             </span>
                             <span>Accueil</span>
                         </a>
                         <a class="nav-item is-tab is-hidden-mobile" href="#services">Services</a>
-                        <a class="nav-item is-tab is-hidden-mobile" href="#">A propos</a>
-                        <a class="nav-item is-tab" href="mailto:contact@larbreapages.fr">Contact</a>
+                        <a class="nav-item is-tab is-hidden-mobile" href="#portfolio">Portfolio</a>
+                        <a class="nav-item is-tab" href="#testimonials">Testimonials</a>
+                        <a class="nav-item is-tab" href="#contact">Contact</a>
+                        <a class="nav-item is-tab is-hidden-mobile" href="#about">About</a>
                     </div>
                 </div>
             </div>
@@ -54,11 +56,11 @@
             <div class="container has-text-centered">
                 <img src="./images/logo.svg" alt="logo" class="logo" width="125">
                 <h1 class="logo-title">L'arbre à Pages</h1>
-                <h1 class="title border">ATELIER DU LIVRE D'OR</h1>
-                <h2 class="subtitle is-hidden-mobile">Reliures artisanales, haut de gamme, sur mesure et 100 % personnalisables</h2>
-                <p class="is-hidden-mobile">Toutes mes reliures sont entièrement réalisées à la main et de fabrication française pour la valorisation des métiers d’art et de l’artisanat</p>
+                <h1 class="title is-spaced border">ATELIER DU LIVRE D'OR</h1>
+                <h2 class="subtitle is-5 is-hidden-mobile">Reliures artisanales, haut de gamme, sur mesure et 100 % personnalisables</h2>
+                <p class="is-hidden-mobile" style="font-size:18px;">Toutes mes reliures sont entièrement réalisées à la main et de fabrication française pour la valorisation des métiers d’art et de l’artisanat</p>
                 <div class="buttons">
-                    <a href="https://www.etsy.com/fr/shop/LarbreApages" class="button is-primary is-inverted">
+                    <a href="https://www.etsy.com/fr/shop/LarbreApages?section_id=19710244" class="button is-primary is-inverted">
                         <span class="icon">
                             <i class="fa fa-shopping-cart"></i>
                         </span>
@@ -76,10 +78,10 @@
         <div class="hero-foot">
             <div class="container">
                 <div class="has-text-right">
-                    <a href="https://www.facebook.com/larbreapages/" target="_blank"><i class="fa fa-facebook-official"></i></a>
-                    <a href="https://twitter.com/larbreapages" target="_blank"><i class="fa fa-twitter"></i></a>
-                    <a href="https://fr.pinterest.com/larbreapages/" target="_blank"><i class="fa fa-pinterest"></i></a>
-                    <a href="https://www.instagram.com/larbreapagesfr/" target="_blank"><i class="fa fa-instagram"></i></a>
+                    <a href="https://facebook.com/larbreapages/" class="icon" target="_blank"><i class="fa fa-facebook-official"></i></a>
+                    <a href="https://instagram.com/larbreapagesfr/" class="icon" target="_blank"><i class="fa fa-instagram"></i></a>
+                    <a href="https://twitter.com/larbreapages" class="icon" target="_blank"><i class="fa fa-twitter"></i></a>
+                    <a href="https://pinterest.com/larbreapages/" class="icon" target="_blank"><i class="fa fa-pinterest"></i></a>
                 </div>
                 <br>
             </div>
@@ -89,175 +91,114 @@
         <div class="container">
             <h1 class="has-text-centered">MES SERVICES</h1>	
             <div class="columns">
-                <div class="column has-text-centered">
-                    <i class="fa fa-book fa-4x" aria-hidden="true"></i>
-                    <p><b>Livres d'or</b></p>
+                <div class="column">
+                    <div class="has-text-centered">
+                        <img src="./images/book.png" width="150" />
+                        <p><b>Livres d'or</b></p>
+                    </div>
                     <p>L’intérieur de tous mes livres d’or se compose d’un papier lisse de qualité qui vous permettra une écriture fluide et agréable. Chaque cahier qui compose la reliure de votre livre d’or et minutieusement cousue sur un onglet, ce qui permet un décalage des cahiers et par conséquent une excellente ouverture du livre. L’écriture pourra donc se faire confortablement et bien à plat.</p>
                 </div>
-                <div class="column has-text-centered">
-                    <i class="fa fa-camera-retro fa-4x" aria-hidden="true"></i>
-                    <p><b>Albums Photos</b></p>
+                <div class="column">
+                    <div class="has-text-centered">
+                        <img src="./images/photo.png" width="150" />
+                        <p><b>Albums Photos</b></p>
+                    </div>
                     <p>Avant d’être reliée, chaque planche photo et soigneusement découpée à la main dans un papier spécial photo. Conçue avec une « compensation » prévue pour absorber l’épaisseur des photos, j’intègre à chaque planche, selon votre demande, un papier cristal semi-transparent. Sans acide ni chlore, il protègera vos photos des poussières et rayures.</p>
                 </div>
-                <div class="column has-text-centered">
-                    <i class="fa fa-cubes fa-4x" aria-hidden="true"></i>
-                    <p><b>Boites</b></p>
+                <div class="column">
+                    <div class="has-text-centered">
+                        <img src="./images/box.png" width="150" />
+                        <p><b>Boites</b></p>
+                    </div>
                     <p>C’est la touche finale de votre livre d’or ou album photo ! Pensée et conçue pour s’accorder avec votre reliure, la boîte ou l’étui protègera votre ouvrage de la poussière, des rayures et du soleil. À la fois esthétique et solide, c’est l’élément indispensable pour transporter et conserver votre livre.</p>
                 </div>
             </div>
         </div>
     </section>
-    <section id="work">
-        <div class="container">
-            <h1 class="has-text-centered">DÉCOUVRIR MON TRAVAIL</h1>
+    <section id="portfolio">
+        <h1 class="has-text-centered">PORTFOLIO</h1>
 
-            <div class="tabs is-centered is-toggle">
-                <ul>
-                    <li class="book is-active">
-                        <a>
-                            <span class="icon is-small"><i class="fa fa-book"></i></span>
-                            <span>Livres d'or</span>
-                        </a>
-                    </li>
-                    <li class="album">
-                        <a>
-                            <span class="icon is-small"><i class="fa fa-camera-retro"></i></span>
-                            <span>Albums Photos</span>
-                        </a>
-                    </li>
-                    <li class="boxes">
-                        <a>
-                            <span class="icon is-small"><i class="fa fa-cubes"></i></span>
-                            <span>Boites</span>
-                        </a>
-                    </li>
-                </ul>
-            </div>
+        <div class="tabs is-centered is-large">
+            <ul>
+                <li class="book is-active">
+                    <a>
+                        <span class="icon is-small"><i class="fa fa-book"></i></span>
+                        <span>Livres d'or</span>
+                    </a>
+                </li>
+                <li class="album">
+                    <a>
+                        <span class="icon is-small"><i class="fa fa-camera-retro"></i></span>
+                        <span>Albums Photo</span>
+                    </a>
+                </li>
+                <li class="boxes">
+                    <a>
+                        <span class="icon is-small"><i class="fa fa-cubes"></i></span>
+                        <span>Boites</span>
+                    </a>
+                </li>
+            </ul>
+        </div>
 
-            <div id="portfolio">
-                <div class="book"><img src="./images/books/01.jpg" alt="livre" /></div>
-                <div class="book"><img src="./images/books/02.jpg" alt="livre" /></div>
-                <div class="book"><img src="./images/books/18.jpg" alt="livre" /></div>
-                <div class="book"><img src="./images/books/04.jpg" alt="livre" /></div>
-                <div class="book"><img src="./images/books/05.jpg" alt="livre" /></div>
-                <div class="book"><img src="./images/books/26.jpg" alt="livre" /></div>
-                <div class="book"><img src="./images/books/06.jpg" alt="livre" /></div>
-                <div class="book"><img src="./images/books/10.jpg" alt="livre" /></div>
-                <div class="book"><img src="./images/books/28.jpg" alt="livre" /></div>
-                <div class="book"><img src="./images/books/29.jpg" alt="livre" /></div>
-                <div class="book"><img src="./images/books/13.jpg" alt="livre" /></div>
-                <div class="book"><img src="./images/books/36.jpg" alt="livre" /></div>
-                <div class="album hide"><img src="./images/albums/01.jpg" alt="album" /></div>
-                <div class="album hide"><img src="./images/albums/02.jpg" alt="album" /></div>
-                <div class="album hide"><img src="./images/albums/03.jpg" alt="album" /></div>
-                <div class="album hide"><img src="./images/albums/04.jpg" alt="album" /></div>
-                <div class="album hide"><img src="./images/albums/05.jpg" alt="album" /></div>
-                <div class="album hide"><img src="./images/albums/06.jpg" alt="album" /></div>
-                <div class="album hide"><img src="./images/albums/07.jpg" alt="album" /></div>
-                <div class="album hide"><img src="./images/albums/08.jpg" alt="album" /></div>
-                <div class="album hide"><img src="./images/albums/09.jpg" alt="album" /></div>
-                <div class="album hide"><img src="./images/albums/10.jpg" alt="album" /></div>
-                <div class="album hide"><img src="./images/albums/11.jpg" alt="album" /></div>
-                <div class="album hide"><img src="./images/albums/12.jpg" alt="album" /></div>
-                <div class="boxes hide"><img src="./images/boxes/01.jpg" alt="box" /></div>
-                <div class="boxes hide"><img src="./images/boxes/02.jpg" alt="box" /></div>
-                <div class="boxes hide"><img src="./images/boxes/03.jpg" alt="box" /></div>
-                <div class="boxes hide"><img src="./images/boxes/04.jpg" alt="box" /></div>
-                <div class="boxes hide"><img src="./images/boxes/05.jpg" alt="box" /></div>
-                <div class="boxes hide"><img src="./images/boxes/06.jpg" alt="box" /></div>
-                <div class="boxes hide"><img src="./images/boxes/07.jpg" alt="box" /></div>
-                <div class="boxes hide"><img src="./images/boxes/08.jpg" alt="box" /></div>
-                <div class="boxes hide"><img src="./images/boxes/09.jpg" alt="box" /></div>
-                <div class="boxes hide"><img src="./images/boxes/10.jpg" alt="box" /></div>
-                <div class="boxes hide"><img src="./images/boxes/12.jpg" alt="box" /></div>
-                <div class="boxes hide"><img src="./images/boxes/12.jpg" alt="box" /></div>
-            </div>
+        <div id="gallery">
+            <div class="book"><img src="./images/books/01.jpg" alt="livre" /></div>
+            <div class="book"><img src="./images/books/02.jpg" alt="livre" /></div>
+            <div class="book"><img src="./images/books/18.jpg" alt="livre" /></div>
+            <div class="book"><img src="./images/books/04.jpg" alt="livre" /></div>
+            <div class="book"><img src="./images/books/05.jpg" alt="livre" /></div>
+            <div class="book"><img src="./images/books/26.jpg" alt="livre" /></div>
+            <div class="book"><img src="./images/books/06.jpg" alt="livre" /></div>
+            <div class="book"><img src="./images/books/10.jpg" alt="livre" /></div>
+            <div class="book"><img src="./images/books/28.jpg" alt="livre" /></div>
+            <div class="book"><img src="./images/books/29.jpg" alt="livre" /></div>
+            <div class="book"><img src="./images/books/13.jpg" alt="livre" /></div>
+            <div class="book"><img src="./images/books/36.jpg" alt="livre" /></div>
+            <div class="album hide"><img src="./images/albums/01.jpg" alt="album" /></div>
+            <div class="album hide"><img src="./images/albums/02.jpg" alt="album" /></div>
+            <div class="album hide"><img src="./images/albums/03.jpg" alt="album" /></div>
+            <div class="album hide"><img src="./images/albums/04.jpg" alt="album" /></div>
+            <div class="album hide"><img src="./images/albums/05.jpg" alt="album" /></div>
+            <div class="album hide"><img src="./images/albums/06.jpg" alt="album" /></div>
+            <div class="album hide"><img src="./images/albums/07.jpg" alt="album" /></div>
+            <div class="album hide"><img src="./images/albums/08.jpg" alt="album" /></div>
+            <div class="album hide"><img src="./images/albums/09.jpg" alt="album" /></div>
+            <div class="album hide"><img src="./images/albums/10.jpg" alt="album" /></div>
+            <div class="album hide"><img src="./images/albums/11.jpg" alt="album" /></div>
+            <div class="album hide"><img src="./images/albums/12.jpg" alt="album" /></div>
+            <div class="boxes hide"><img src="./images/boxes/01.jpg" alt="box" /></div>
+            <div class="boxes hide"><img src="./images/boxes/02.jpg" alt="box" /></div>
+            <div class="boxes hide"><img src="./images/boxes/03.jpg" alt="box" /></div>
+            <div class="boxes hide"><img src="./images/boxes/04.jpg" alt="box" /></div>
+            <div class="boxes hide"><img src="./images/boxes/05.jpg" alt="box" /></div>
+            <div class="boxes hide"><img src="./images/boxes/06.jpg" alt="box" /></div>
+            <div class="boxes hide"><img src="./images/boxes/07.jpg" alt="box" /></div>
+            <div class="boxes hide"><img src="./images/boxes/08.jpg" alt="box" /></div>
+            <div class="boxes hide"><img src="./images/boxes/09.jpg" alt="box" /></div>
+            <div class="boxes hide"><img src="./images/boxes/10.jpg" alt="box" /></div>
+            <div class="boxes hide"><img src="./images/boxes/12.jpg" alt="box" /></div>
+            <div class="boxes hide"><img src="./images/boxes/12.jpg" alt="box" /></div>
         </div>
     </section>
     <section id="testimonials">
         <div class="container">
             <h1 class="has-text-centered">TESTIMONIALS</h1>	
             <div class="columns">
-                <div class="column">
-                    <div class="card">
-                        <div class="card-content">
-                            <div class="media">
-                                <div class="media-left">
-                                    <figure class="image is-48x48">
-                                        <img src="http://via.placeholder.com/95x95" alt="Image">
-                                    </figure>
-                                </div>
-                                <div class="media-content">
-                                    <p class="title is-4">Synercoop</p>
-                                    <p class="subtitle is-6">@synercoop</p>
-                                </div>
-                            </div>
-
-                            <div class="content">
-                                Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                                Phasellus nec iaculis mauris. <a>@bulmaio</a>.
-                                <a>#css</a> <a>#responsive</a>
-                                <br>
-                                <small>11:09 PM - 1 Jan 2016</small>
-                            </div>
-                        </div>
-                    </div>
+                <div class="column has-text-centered">
+                    <img src="./images/avatar1.jpg" class="is-circle" />
+                    <p><b><a href="#">@AnnaDeynah</a></b></p>
+                    <q>Amet alias amet vero pariatur quaerat? Harum ratione quaerat ipsum nobis beatae. Suscipit mollitia tempora fuga consequuntur deleniti, quidem Est.</q>
                 </div>
-                <div class="column">
-                    <div class="card">
-                        <div class="card-content">
-                            <div class="media">
-                                <div class="media-left">
-                                    <figure class="image is-48x48">
-                                        <img src="http://via.placeholder.com/95x95" alt="Image">
-                                    </figure>
-                                </div>
-                                <div class="media-content">
-                                    <p class="title is-4">Au Grès Du Coton</p>
-                                    <p class="subtitle is-6">@AuGreDuCoton</p>
-                                </div>
-                            </div>
-
-                            <div class="content">
-                                Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                                Phasellus nec iaculis mauris. <a>@bulmaio</a>.
-                                <a>#css</a> <a>#responsive</a>
-                                <br>
-                                <small>11:09 PM - 1 Jan 2016</small>
-                            </div>
-                        </div>
-                    </div>
+                <div class="column has-text-centered">
+                    <img src="./images/avatar2.jpg" class="is-circle" />
+                    <p><b><a href="#">@JohnDoe</a></b></p>
+                    <q>Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi.</q>
                 </div>
-                <div class="column">
-                    <div class="card">
-                        <div class="card-content">
-                            <div class="media">
-                                <div class="media-left">
-                                    <figure class="image is-48x48">
-                                        <img src="http://via.placeholder.com/95x95" alt="Image">
-                                    </figure>
-                                </div>
-                                <div class="media-content">
-                                    <p class="title is-4">John Smith</p>
-                                    <p class="subtitle is-6">@johnsmith</p>
-                                </div>
-                            </div>
-
-                            <div class="content">
-                                Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                                Phasellus nec iaculis mauris. <a>@bulmaio</a>.
-                                <a>#css</a> <a>#responsive</a>
-                                <br>
-                                <small>11:09 PM - 1 Jan 2016</small>
-                            </div>
-                        </div>
-                    </div>
+                <div class="column has-text-centered">
+                    <img src="./images/avatar3.jpg" class="is-circle" />
+                    <p><b>Maria Kate</b></p>
+                    <q>At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti.</q>
                 </div>
-                <!-- <div class="column has-text-centered"> -->
-                <!-- <img src="http://via.placeholder.com/95x95" class="is-circle" /> -->
-                <!-- <p><b>Synercoop</b></p> -->
-                <!-- <p>Amet alias amet vero pariatur quaerat? Harum ratione quaerat ipsum nobis beatae. Suscipit mollitia tempora fuga consequuntur deleniti, quidem Est.</p> -->
-                <!-- </div> -->
             </div>
         </div>
     </section>
@@ -265,7 +206,20 @@
         <div class="container has-text-centered">
             <h1>CONTACT</h1>
             <iframe height="300px" frameBorder="0" src="http://umap.openstreetmap.fr/fr/map/carte-sans-nom_155725?scaleControl=false&miniMap=false&scrollWheelZoom=false&zoomControl=true&allowEdit=false&moreControl=true&searchControl=null&tilelayersControl=null&embedControl=null&datalayersControl=true&onLoadPanel=undefined&captionBar=false#18/48.68965/6.19353"></iframe>
-            <p>L'Arbre à Pages, 108 rue Charles III Nancy 54000 - 06.17.48.30.69 - <a href="mailto:contact@larbreapages.fr">contact@larbreapages.fr</a></p>
+            <div class="columns">
+                <div class="column">
+                    <i class="fa fa-map-marker fa-2x"></i>
+                    <p>108 rue Charles III Nancy 54000</p>
+                </div>
+                <div class="column">
+                    <i class="fa fa-phone fa-2x"></i>
+                    <p>06.17.48.30.69</p>
+                </div>
+                <div class="column">
+                    <i class="fa fa-envelope fa-2x"></i>
+                    <p><a href="mailto:contact@larbreapages.fr">contact@larbreapages.fr</a></p>
+                </div>
+            </div>
         </div>
         </div>
     </section>
@@ -274,27 +228,29 @@
             <h1 class="has-text-centered">ABOUT ME</h1>
             <div class="columns">
                 <div class="column is-narrow has-text-centered">
-                    <img src="./images/profil.jpg" />
+                    <img src="./images/camille.jpg" width="500" />
                 </div>
                 <div class="column">
-                    <p style="margin:5px; margin-bottom:10px;">Bricoleuse et créative dès mon enfance, c’est tout naturellement que je me suis orientée vers un univers manuel et imaginatif ! Ce métier, Relieur d’Art, je l’ai découvert après mon bac Génie des Matériaux, lors d’une année de Mise à Niveau en Arts-Appliqués. Et bien-sûr, je me débrouillais toujours pour présenter mon travail sous forme de carnets ou de boîtes…
-                    Bien que ce métier mêle à la fois tradition, savoir-faire et création, j’avoue préférer davantage l’aspect innovant et ingénieux de celui-ci. En effet, sans cesse à la recherche de nouvelles techniques, structures, matières et associations, j’aime nourrir ma créativité et perfectionner la maîtrise de mes gestes grâce à de nouveaux projets.
-                    C’est pourquoi, après avoir travaillé auprès de plusieurs Relieurs d’Art et chez Renov’Livres, relieur industriel à Ludres, j'ai décidé de monter mon propre atelier de reliure consacré principalement aux livres d’or et albums photo haut de gamme. Ainsi, chaque projet et une nouveauté (et parfois même un défi) à travers laquelle je me perds, pour mon plus grand plaisir, à explorer de nouvelles associations de couleurs & matières…Pour moi, rien est impossible, ou presque !</p>
+                    <p>Bricoleuse et créative dès mon enfance, c’est tout naturellement que je me suis orientée vers un univers manuel et imaginatif ! Ce métier, Relieur d’Art, je l’ai découvert après mon bac Génie des Matériaux, lors d’une année de Mise à Niveau en Arts-Appliqués. Et bien-sûr, je me débrouillais toujours pour présenter mon travail sous forme de carnets ou de boîtes…</p><br />
+                    <p>Bien que ce métier mêle à la fois tradition, savoir-faire et création, j’avoue préférer davantage l’aspect innovant et ingénieux de celui-ci. En effet, sans cesse à la recherche de nouvelles techniques, structures, matières et associations, j’aime nourrir ma créativité et perfectionner la maîtrise de mes gestes grâce à de nouveaux projets.</p><br />
                 </div>
             </div>
+            <p>C’est pourquoi, après avoir travaillé auprès de plusieurs Relieurs d’Art et chez Renov’Livres, relieur industriel à Ludres, j'ai décidé de monter mon propre atelier de reliure consacré principalement aux livres d’or et albums photo haut de gamme. Ainsi, chaque projet et une nouveauté (et parfois même un défi) à travers laquelle je me perds, pour mon plus grand plaisir, à explorer de nouvelles associations de couleurs & matières…Pour moi, rien est impossible, ou presque !</p>
         </div>
     </section>
     <footer class="footer">
         <div class="container">
             <div class="content has-text-centered">
                 <p>
-                <strong>L'Arbre à Pages</strong> by <a href="https://github.com/stoneo" targt="_blank">Stoneo</a>. The source code is licensed
-                <a href="http://opensource.org/licenses/mit-license.php" target="_blank">MIT</a>.
+                    &copy;2016-2017 L'Arbre à Pages. Tous Droits Réservés <br>
+                    Partenaires : <a href="http://augreducoton.fr/" target="_blank">Au Gré Du Coton</a>, <a href="http://www.synercoop.org/" target="_blank">Synercoop</a>
                 </p>
                 <p>
-                <a class="icon" href="https://github.com/larbreapages/larbreapages">
-                    <i class="fa fa-github"></i>
-                </a>
+                    <a href="https://facebook.com/larbreapages/" class="icon" target="_blank"><i class="fa fa-facebook-official"></i></a>
+                    <a href="https://instagram.com/larbreapagesfr/" class="icon" target="_blank"><i class="fa fa-instagram"></i></a>
+                    <a href="https://twitter.com/larbreapages" class="icon" target="_blank"><i class="fa fa-twitter"></i></a>
+                    <a href="https://pinterest.com/larbreapages/" class="icon" target="_blank"><i class="fa fa-pinterest"></i></a>
+                    <a href="https://github.com/larbreapages/larbreapages" class="icon"><i class="fa fa-github"></i></a>
                 </p>
             </div>
         </div>

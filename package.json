@@ -16,15 +16,12 @@
     "babel-polyfill": "^6.23.0",
     "body-parser": "^1.16.1",
     "bookbuilder": "^0.3.4",
-    "bootstrap": "^3.3.7",
-    "bootstrap-validator": "^0.11.9",
     "bulma": "^0.4.2",
     "compression": "^1.6.2",
     "express": "^4.14.1",
-    "jquery": "^2.2.4",
     "normalize.css": "^5.0.0",
     "pm2": "^2.4.0",
-    "slick-carousel": "^1.6.0"
+    "zenscroll": "^4.0.0"
   },
   "devDependencies": {
     "babel-cli": "^6.23.0",
