@@ -1,29 +1,41 @@
+import 'zenscroll';
+
 console.log('Welcome to larbreapages.fr');
 
 // Move menu during scroll
 const getYPosition = el => el.getBoundingClientRect().top + window.scrollY;
 
-window.addEventListener('scroll', () => {
+const scrollEvent = () => {
     const scrollpos = window.scrollY;
 
+    document.querySelectorAll('#home, #services, #portfolio, #testimonials, #contact, #about').forEach((el) => {
+        const id = el.getAttribute('id');
+
+        if (scrollpos >= (getYPosition(document.querySelector(`#${id}`)) - document.querySelector('.nav').offsetHeight)) {
+            document.querySelector(`a[href="#${id}"]`).classList.add('is-active');
+            document.querySelectorAll(`.nav a:not([href="#${id}"])`).forEach(e => e.classList.remove('is-active'));
+        }
+    });
+
     if (scrollpos > (getYPosition(document.querySelector('#services')) - document.querySelector('.nav').offsetHeight)) {
-        document.querySelector('.nav').style.backgroundColor = '#f8f8f8';
-        Array.prototype.map.call(document.querySelectorAll('.nav a'), el => (el.style.color = 'black'));
+        document.querySelector('.nav').classList.add('nav-scrolled');
     } else {
-        Array.prototype.map.call(document.querySelectorAll('.nav a'), el => (el.style.color = 'inherit'));
-        document.querySelector('.nav').style.backgroundColor = 'inherit';
+        document.querySelector('.nav').classList.remove('nav-scrolled');
     }
-});
+}
+
+window.addEventListener('scroll', scrollEvent);
+scrollEvent();
 
 // Tab
 
 const selectTab = (tab) => {
-    Array.prototype.map.call(document.querySelectorAll('#portfolio div'), el => el.classList.add('hide'));
-    Array.prototype.map.call(document.getElementsByClassName(tab), el => el.classList.remove('hide'));
-    Array.prototype.map.call(document.querySelectorAll('.tabs ul li'), el => el.classList.remove('is-active'));
+    document.querySelectorAll('#gallery div').forEach(el => el.classList.add('hide'));
+    document.querySelectorAll(`.${tab}`).forEach(el => el.classList.remove('hide'));
+    document.querySelectorAll('.tabs ul li').forEach(el => el.classList.remove('is-active'));
 };
 
-[].forEach.call(document.querySelectorAll('.tabs ul li'), e => e.addEventListener('click', () => {
+document.querySelectorAll('.tabs ul li').forEach(e => e.addEventListener('click', () => {
     const currentTab = e.classList[0];
     selectTab(currentTab);
     e.classList.add('is-active');

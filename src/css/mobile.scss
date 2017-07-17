@@ -1,11 +1,13 @@
-::selection {
-    background: $primary;
-    color: white;
-}
+@import url('https://fonts.googleapis.com/css?family=Raleway');
 
 @font-face {
     font-family: "GoodVibrations";
     src: url('../fonts/goodvibrationsscript.ttf');
+}
+
+::selection {
+    background: $primary;
+    color: white;
 }
 
 .hero {
@@ -15,10 +17,6 @@
     background-size: cover;
 }
 
-h1.logo-title {
-    margin-bottom: 0rem!important;
-}
-
 .logo {
     width: 125px;
     margin-bottom: -15px;
@@ -26,27 +24,18 @@ h1.logo-title {
 
 h1.logo-title {
     font-family: "GoodVibrations";
+    margin-bottom: 0rem!important;
     color: $primary;
-    font-size: 40px;
 }
 
-.hero-foot .has-text-right {
-    margin-right: 15px;
-}
-
-.hero-foot a:not(:last-child) {
-    margin-right: 5px;
+.title {
+    font-size: $size-4;
 }
 
 .hero-foot a:hover {
     color: $primary!important;
 }
 
-h1.title {
-    text-transform: uppercase;
-    letter-spacing: 3px;
-    font-size: 1.35rem;
-}
 
 p.quote {
     margin-bottom: 1.5rem!important;
@@ -90,11 +79,6 @@ p.quote {
 
 h1 {
     font-size: $size-1;
-    margin-bottom: 30px;
-}
-
-section.hero {
-    margin-bottom: 0px;
 }
 
 h2 {
@@ -111,30 +95,33 @@ h4 {
 
 // Portfolio
 
-#portfolio {
+#gallery {
   display: flex;
   flex-wrap: wrap;
   margin-left: 5px;
   margin-right: 5px;
 }
 
-#portfolio::after {
+#gallery::after {
   content: '';
   flex-grow: 999999999;
 }
 
-#portfolio div {
+#gallery div {
   flex-grow: 1;
   height: 100px;
 }
 
-#portfolio img {
+#gallery img {
   height: 100px;
   object-fit: cover;
   max-width: 100%;
   min-width: 100%;
   vertical-align: bottom;
-  // border: 1px solid #ddd;
+}
+
+.fa-2x {
+    font-size: 2em!important;
 }
 
 .fa-4x {
@@ -151,7 +138,7 @@ h4 {
 }
 
 #services .fa {
-    color: $primary;
+    padding: 30px;
 }
 
 .is-circle {
@@ -168,4 +155,97 @@ h4 {
 
 .hide {
     display: none;
+}
+
+.nav-scrolled {
+    box-shadow: 0 5px 30px 0 rgba(0,0,0,0.1)!important;
+    background-color: rgb(248, 248, 248)!important;
+
+    a {
+        color: black!important;
+    }
+}
+
+.hero {
+    padding-top: 0px!important;
+    padding-bottom: 0px!important;
+}
+
+section#portfolio, section#contact {
+    background-color: #F5F5F5;
+}
+
+section {
+    padding-top: 50px;
+    padding-bottom: 50px;
+}
+
+#services .column {
+    margin-left: 10px;
+}
+
+#services img {
+    margin-top: -30px;
+}
+
+#services .column div {
+    margin-bottom: 20px;
+}
+
+#services .column > p {
+    text-align: justify;
+}
+
+.tabs a {
+    padding: 0.5em 0.4em;
+}
+
+section#about p {
+   margin: 0px 10px;
+   text-align: justify;
+}
+
+#testimonials .is-circle {
+    max-width: 160px;
+    box-shadow: 0 5px 11px 0 rgba(0,0,0,.18), 0 4px 15px 0 rgba(0,0,0,.15);
+}
+
+q {
+    font-size: $size-5;
+}
+
+q:before {
+    padding-right: 10px;
+}
+
+q:after {
+    padding-left: 10px;
+}
+
+#contact .columns {
+    margin-top: 10px;
+}
+
+.tabs i {
+    font-size: 25px!important;
+}
+
+#about .columns {
+    margin-bottom: inherit;
+}
+
+.nav {
+    transition: all 0.2s ease;
+}
+
+#services .column > p {
+    margin-right: 10px;
+}
+
+.tabs.is-large {
+    font-size: 16px;
+}
+
+.nav a {
+    font-size: inherit!important;
 }

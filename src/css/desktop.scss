@@ -7,20 +7,12 @@
         font-size: 1.35rem;
     }
 
-    .subtitle {
-        font-size: 1.65rem;
-    }
-
-    q {
-        font-size: 1.45rem;
+    .title {
+        font-size: $size-3;
     }
 
     h1.logo-title {
         font-size: 4rem;
-    }
-
-    h1.title {
-        font-size: $size-3;
     }
 
     .button {
@@ -31,8 +23,13 @@
         @include border;
     }
 
-    #portfolio div, #portfolio img {
+    #gallery div, #gallery img {
         height: 200px;
+    }
+
+    #gallery {
+        margin-left: 0px;
+        margin-right: 0px;
     }
 
     .card {
@@ -41,10 +38,6 @@
 
     #contact {
         text-align: inherit;
-    }
-
-    section {
-        margin-bottom: 50px;
     }
 
     .hero-body .subtitle {
@@ -58,6 +51,18 @@
 
     .hero-body .buttons {
         margin-top: 20px;
+    }
+
+    section:not(#home) h1 {
+        margin-bottom: 50px;
+    }
+
+    .tabs a {
+        padding: 0.5em 1em;
+    }
+
+    .tabs.is-large {
+        font-size: 1.5rem;
     }
 }
 
