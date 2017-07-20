@@ -39,11 +39,8 @@ module.exports = {
         ],
     },
     plugins: [
-        new HtmlWebpackPlugin({
-            filename: 'index.html',
-            template: `${__dirname}/src/index.html`,
-            hash: true,
-        }),
+        new HtmlWebpackPlugin({ filename: 'index.html', template: `${__dirname}/src/index.html`, hash: true }),
+        new HtmlWebpackPlugin({ filename: 'demande.html', template: `${__dirname}/src/demande.html`, hash: true }),
         new ExtractTextPlugin({ filename: '[name].css', allChunks: false }),
         new BrowserSyncPlugin({
             host: 'localhost',

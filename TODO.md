@@ -1,5 +1,6 @@
 - [x] Resolve problem render html
 - [x] Open-source website on github.com
+- [ ] CDN
 - [ ] Edit text system for client
 - [ ] Handle cache (add ressources ID)
 - [ ] Remove html minify
