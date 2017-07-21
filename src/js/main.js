@@ -22,13 +22,12 @@ const scrollEvent = () => {
     } else {
         document.querySelector('.nav').classList.remove('nav-scrolled');
     }
-}
+};
 
 window.addEventListener('scroll', scrollEvent);
 scrollEvent();
 
 // Tab
-
 const selectTab = (tab) => {
     document.querySelectorAll('#gallery div').forEach(el => el.classList.add('hide'));
     document.querySelectorAll(`.${tab}`).forEach(el => el.classList.remove('hide'));
@@ -40,3 +39,13 @@ document.querySelectorAll('.tabs ul li').forEach(e => e.addEventListener('click'
     selectTab(currentTab);
     e.classList.add('is-active');
 }));
+
+// Iframe
+window.onload = () => {
+    const defer = document.getElementsByTagName('iframe');
+    for (let i = 0; i < defer.length; i += 1) {
+        if (defer[i].getAttribute('data-src')) {
+            defer[i].setAttribute('src', defer[i].getAttribute('data-src'));
+        }
+    }
+};
