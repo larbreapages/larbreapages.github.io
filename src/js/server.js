@@ -5,7 +5,7 @@ import compression from 'compression';
 import bodyParser from 'body-parser';
 
 const app = express();
-const PORT = process.env.PORT || 9000;
+const PORT = process.env.PORT || 5000;
 app.use(compression());
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
