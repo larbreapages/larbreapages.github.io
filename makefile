@@ -1,6 +1,6 @@
 .PHONY: install build watch run
 
-PORT := 9000
+PORT := 5000
 
 install: ## Install application
 	@ yarn --ignore-engines
