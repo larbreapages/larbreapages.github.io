@@ -2,6 +2,7 @@ import HtmlWebpackPlugin from 'html-webpack-plugin';
 import ExtractTextPlugin from 'extract-text-webpack-plugin';
 import StringReplacePlugin from 'string-replace-webpack-plugin';
 import BrowserSyncPlugin from 'browser-sync-webpack-plugin';
+import ScriptExtHtmlWebpackPlugin from 'script-ext-html-webpack-plugin';
 
 module.exports = {
     entry: {
@@ -47,5 +48,8 @@ module.exports = {
             port: 3000,
             server: { baseDir: ['public'] },
         }),
+        new ScriptExtHtmlWebpackPlugin({
+            defaultAttribute: 'async'
+        })
     ],
 };
