@@ -17,7 +17,7 @@ const scrollEvent = () => {
         }
     });
 
-    if (scrollpos > (getYPosition(document.querySelector('#services')) - document.querySelector('.nav').offsetHeight)) {
+    if (scrollpos > document.querySelector('.nav').offsetHeight) {
         document.querySelector('.nav').classList.add('nav-scrolled');
     } else {
         document.querySelector('.nav').classList.remove('nav-scrolled');
