@@ -8,7 +8,7 @@ const getYPosition = el => el.getBoundingClientRect().top + window.scrollY;
 const scrollEvent = () => {
     const scrollpos = window.scrollY;
 
-    document.querySelectorAll('#home, #services, #portfolio, #testimonials, #contact, #about').forEach((el) => {
+    document.querySelectorAll('section').forEach((el) => {
         const id = el.getAttribute('id');
 
         if (scrollpos >= (getYPosition(document.querySelector(`#${id}`)) - document.querySelector('.nav').offsetHeight)) {
@@ -34,7 +34,7 @@ const selectTab = (tab) => {
     document.querySelectorAll('.tabs ul li').forEach(el => el.classList.remove('is-active'));
 };
 
-document.querySelectorAll('.tabs ul li').forEach(e => e.addEventListener('click', () => {
+document.querySelectorAll('#portfolio .tabs ul li').forEach(e => e.addEventListener('click', () => {
     const currentTab = e.classList[0];
     selectTab(currentTab);
     e.classList.add('is-active');
