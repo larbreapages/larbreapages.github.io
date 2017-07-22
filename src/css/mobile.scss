@@ -55,7 +55,7 @@ h4 {
 }
 
 .nav {
-    transition: all 0.3s ease;
+    transition: 0.3s;
 }
 
 .hero .nav.nav-scrolled {
@@ -94,6 +94,7 @@ h4 {
 
 .hero .hero-body .button {
     margin-bottom: 10px;
+    transition: 0.3s;
 }
 
 .hero .button.is-primary.is-inverted:hover {
