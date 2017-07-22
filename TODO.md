@@ -1,13 +1,7 @@
 - [x] Resolve problem render html
 - [x] Open-source website on github.com
-- [ ] Edit text system for client
-- [ ] Handle cache (add ressources ID)
-- [ ] Remove html minify
+- [x] HTTPS
+- [ ] Blur background loading
+- [ ] CDN
 - [ ] Add english version
 - [ ] Lazy load for images and fonts
-- [ ] Don't deploy if build failed
-- [ ] Create SVG images
-- [ ] Balises H1, H2 for SEO
-- [ ] alt attribut for SEO
-- [ ] Make a speedtest
-- [ ] HTTPS

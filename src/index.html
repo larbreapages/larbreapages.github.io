@@ -26,101 +26,233 @@
 	<!-- End Piwik Code -->
 </head>
 <body>
-    <div class="container">
-        <header>
-            <div class="row">
-                <div class="col-md-12">
-                    <div id="logo">
-                        <div class="text-center">
-                            <img src="./images/logo.svg" alt="logo" width="120"/>
-                            <p class="small gold">Atelier de Reliure d’Art</p>
-                        </div>
-                        <a href="/" class="url">L'arbre à Pages</a>
+    <section id="home" class="hero is-fullheight is-dark">
+        <div class="hero-head">
+            <div class="nav">
+                <div class="container">
+                    <div class="nav-left">
+                        <a class="nav-item">
+                            <img src="./images/logo.svg" alt="logo" width="28">
+                            <span>&nbsp;&nbsp;L'Arbre à Pages</span>
+                        </a>
+                    </div>
+                    <div class="nav-right nav-menu">
+                        <a class="nav-item is-tab is-hidden-mobile is-active" href="#home">
+                            <span class="icon">
+                                <i class="fa fa-home"></i>
+                            </span>
+                            <span>Accueil</span>
+                        </a>
+                        <a class="nav-item is-tab is-hidden-mobile" href="#services">Services</a>
+                        <a class="nav-item is-tab is-hidden-mobile" href="#portfolio">Portfolio</a>
+                        <a class="nav-item is-tab" href="#testimonials">Témoignages</a>
+                        <a class="nav-item is-tab" href="#contact">Contact</a>
+                        <a class="nav-item is-tab is-hidden-mobile" href="#about">À propos</a>
                     </div>
                 </div>
             </div>
-        </header>
-
-        <div class="row">
-            <div class="col-md-12">
-                <div class="alert alert-info hidden" role="alert">Merci ! Votre demande a bien été prise en compte.</div>
-            </div>
-            <div class="col-md-12">
-                <div class="slider">
-                    <div><img src="./images/livre_9.png" alt="livre"/></div>
-                    <div><img src="./images/livre_6.png" alt="livre"/></div>
-                    <div><img src="./images/livre_2.png" alt="livre"/></div>
-                    <div><img src="./images/livre_4.png" alt="livre"/></div>
-                    <div><img src="./images/livre_8.png" alt="livre"/></div>
-                    <div><img src="./images/livre_1.png" alt="livre"></div>
-                    <div><img src="./images/livre_3.png" alt="livre"></div>
-                    <div><img src="./images/livre_10.png" alt="livre"/></div>
-                    <div><img src="./images/livre_5.png" alt="livre"/></div>
+        </div>
+        <div class="hero-body">
+            <div class="container has-text-centered">
+                <img src="./images/logo.svg" alt="logo" class="logo" width="125">
+                <h1 class="logo-title">L'arbre à Pages</h1>
+                <h1 class="title is-spaced border">ATELIER DU LIVRE D'OR</h1>
+                <h2 class="subtitle is-5 is-hidden-mobile">Reliures artisanales, haut de gamme, sur mesure et 100 % personnalisables</h2>
+                <p class="is-hidden-mobile" style="font-size:18px;">Toutes mes reliures sont entièrement réalisées à la main et de fabrication française pour la valorisation des métiers d’art et de l’artisanat</p>
+                <div class="buttons">
+                    <a href="https://www.etsy.com/fr/shop/LarbreApages?section_id=19710244" class="button is-primary is-inverted" target="_blank">
+                        <span class="icon">
+                            <i class="fa fa-shopping-cart"></i>
+                        </span>
+                        <span>Acheter un modèle</span>
+                    </a>
+                    <a href="demande.html" class="button is-primary is-inverted" target="_blank">
+                        <span class="icon">
+                            <i class="fa fa-pencil-square-o"></i>
+                        </span>
+                        <span>Faire une demande personnalisée</span>
+                    </a>
                 </div>
             </div>
         </div>
-
-        <div class="row">
-            <div class="col-md-12">
-                <fieldset class="fieldset-bookbuilder">
-                    <legend align="center">CRÉE TON CARNET</legend>
-                    <div id="bookbuilder"></div>
-                </fieldset>
-            </div>
-        </div>
-
-        <div class="row">
-            <div id="services" class="col-md-9">
-                <fieldset>
-                    <legend align="center">NOS SAVOIR-FAIRE</legend>
-                    <div class="col-md-4" align="center">
-                        <a href="https://www.etsy.com/fr/shop/LarbreApages?section_id=19678790" target="_blank"><i class="fa fa-book fa-4x"></i></a>
-                        <h5><b><a href="https://www.etsy.com/fr/shop/LarbreApages?section_id=19678790" target="_blank">PAPETERIE & ACCESSOIRES</a></b></h5>
-                        <p>Carnets de voyage, de croquis, de dessins, agendas, tapis de souris, crayons à papier & stylos, marque-pages, dessous de verre...</p>
-                    </div>
-                    <div class="col-md-4" align="center">
-                        <a href="https://www.etsy.com/fr/shop/LarbreApages?section_id=19710244" target="_blank"><i class="fa fa-diamond fa-4x"></i></a>
-                        <h5><b><a href="https://www.etsy.com/fr/shop/LarbreApages?section_id=19710244" target="_blank">GAMME PREMIUM</a></b></h5>
-                        <p>Livres d’Or, albums photo, reliures de création, reliures traditionnelles, travaux de restauration et de conservation...</p>
-                    </div>
-                    <div class="col-md-4" align="center">
-                        <a href="https://www.etsy.com/shop/LarbreApages?section_id=20593965" target="_blank"><i class="fa fa-cubes fa-4x"></i></a>
-                        <h5><b><a href="https://www.etsy.com/shop/LarbreApages?section_id=20593965" target="_blank">COFFRETS & BOÎTES</a></b></h5>
-                        <p>Boîtes de rangement divers, boîtes à bijoux, boîtes à photos, boîtes à couture, coffrets à thé...</p>
-                    </div>
-                </fieldset>
-            </div>
-            <div id="values" class="col-md-3">
-                <fieldset>
-                    <legend align="center">NOS VALEURS</legend>
-                    <ul>
-                        <li>100 % fait main et de fabrication française</li>
-                        <li>Créations sur mesure et personnalisables</li>
-                        <li>Valorisation des métiers d'art et de l'artisanat</li>
-                        <li>Open-source</li>
-                    </ul>
-                </fieldset>
-            </div>
-        </div>
-
-        <hr>
-        <footer>
-            <div class="row">
-                <div class="col-md-9 col-sm-9 col-xs-9">Copyright @ 2016-2017. Tous droits réservés | <a href="mailto:contact@larbreapages.fr" target="_blank">contact@larbreapages.fr</a></div>
-                <div class="col-md-3 col-sm-3 col-xs-3 text-right">
-                    <a href="mailto:contact@larbreapages.fr" data-toggle="tooltip" data-placement="top" title="contact@larbreapages.fr"><i class="fa fa-envelope"></i></a>
-                    <a href="https://camille-aubert.ovh" target="_blank" data-toggle="tooltip" data-placement="top" title="Mon portfolio"><i class="fa fa-briefcase"></i></a>
-                    <a href="https://www.facebook.com/larbreapages/" target="_blank" data-toggle="tooltip" data-placement="top" title="Mon Facebook"><i class="fa fa-facebook-official"></i></a>
-                    <a href="https://twitter.com/larbreapages" target="_blank" data-toggle="tooltip" data-placement="top" title="Mon Twitter"><i class="fa fa-twitter"></i></a>
-                    <a href="https://fr.pinterest.com/larbreapages/" target="_blank" data-toggle="tooltip" data-placement="top" title="Mon Pinterest"><i class="fa fa-pinterest"></i></a>
-                    <a href="https://www.instagram.com/larbreapagesfr/" target="_blank" data-toggle="tooltip" data-placement="top" title="Mon Instagram"><i class="fa fa-instagram"></i></a>
-                    <a href="https://www.etsy.com/fr/shop/LarbreApages" target="_blank" data-toggle="tooltip" data-placement="top" title="Ma boutique Etsy"><img src="./images/etsy.svg" class="etsy" alt="etsy"></a>
-                    <a href="https://www.alittlemarket.com/boutique/larbreapages-2871235.html" target="_blank" data-toggle="tooltip" data-placement="top" title="Ma boutique Alittlemarket"><img src="./images/alittlemarket.png" class="alittlemarket" alt="alittlemarket"></a>
-                    <a href="https://github.com/larbreapages" target="_blank" data-toggle="tooltip" data-placement="top" title="Github"><i class="fa fa-github"></i></a>
+        <div class="hero-foot">
+            <div class="container">
+                <div class="has-text-right">
+                    <a href="https://facebook.com/larbreapages/" class="icon" target="_blank"><i class="fa fa-facebook-official"></i></a>
+                    <a href="https://instagram.com/larbreapagesfr/" class="icon" target="_blank"><i class="fa fa-instagram"></i></a>
+                    <a href="https://twitter.com/larbreapages" class="icon" target="_blank"><i class="fa fa-twitter"></i></a>
+                    <a href="https://pinterest.com/larbreapages/" class="icon" target="_blank"><i class="fa fa-pinterest"></i></a>
+                    <a href="https://github.com/larbreapages/larbreapages" class="icon" target="_blank"><i class="fa fa-github"></i></a>
                 </div>
-                <div class="col-md-12 col-sm-12 col-xs-12">Partenaires : <a href="http://augreducoton.fr/" target="_blank">Au Gré Du Coton</a>, <a href="http://www.synercoop.org/" target="_blank">Synercoop</a></div>
+                <br>
             </div>
-        </footer>
-    </div>
+        </div>
+    </section>
+    <section id="services">
+        <div class="container">
+            <h3 class="has-text-centered">SERVICES</h3>	
+            <div class="columns">
+                <div class="column">
+                    <div class="has-text-centered">
+                        <i class="fa fa-book fa-4x" aria-hidden="true"></i>
+                        <p><b>Livres d'or</b></p>
+                    </div>
+                    <p>L’intérieur de tous mes livres se compose d’un papier lisse de qualité qui vous permettra une écriture fluide et agréable. Chaque cahier qui compose la reliure de votre livre d’or et minutieusement cousue sur un onglet, ce qui permet un décalage des cahiers et par conséquent une excellente ouverture du livre. L’écriture pourra donc se faire confortablement et bien à plat.</p>
+                </div>
+                <div class="column">
+                    <div class="has-text-centered">
+                        <i class="fa fa-camera-retro fa-4x" aria-hidden="true"></i>
+                        <p><b>Albums Photos</b></p>
+                    </div>
+                    <p>Avant d’être reliée, chaque planche photo et soigneusement découpée à la main dans un papier spécial photo. Conçue avec une « compensation » prévue pour absorber l’épaisseur des photos, j’intègre à chaque planche, selon votre demande, un papier cristal semi-transparent. Sans acide ni chlore, il protègera vos photos des poussières et rayures.</p>
+                </div>
+                <div class="column">
+                    <div class="has-text-centered">
+                        <i class="fa fa-cubes fa-4x" aria-hidden="true"></i>
+                        <p><b>Boites</b></p>
+                    </div>
+                    <p>C’est la touche finale de votre livre d’or ou album photo ! Pensée et conçue pour s’accorder avec votre reliure, la boîte ou l’étui protègera votre ouvrage de la poussière, des rayures et du soleil. À la fois esthétique et solide, c’est l’élément indispensable pour transporter et conserver votre livre.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section id="portfolio">
+        <div class="container">
+            <h3 class="has-text-centered">PORTFOLIO</h3>
+
+            <div class="tabs is-centered is-large">
+                <ul>
+                    <li class="book is-active">
+                        <a>
+                            <span class="icon is-small"><i class="fa fa-book"></i></span>
+                            <span>Livres d'or</span>
+                        </a>
+                    </li>
+                    <li class="album">
+                        <a>
+                            <span class="icon is-small"><i class="fa fa-camera-retro"></i></span>
+                            <span>Albums Photo</span>
+                        </a>
+                    </li>
+                    <li class="boxes">
+                        <a>
+                            <span class="icon is-small"><i class="fa fa-cubes"></i></span>
+                            <span>Boites</span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+
+            <div id="gallery">
+                <div class="book"><img src="./images/books/01.jpg" alt="livre" /></div>
+                <div class="book"><img src="./images/books/02.jpg" alt="livre" /></div>
+                <div class="book"><img src="./images/books/03.jpg" alt="livre" /></div>
+                <div class="book"><img src="./images/books/04.jpg" alt="livre" /></div>
+                <div class="book"><img src="./images/books/05.jpg" alt="livre" /></div>
+                <div class="book"><img src="./images/books/06.jpg" alt="livre" /></div>
+                <div class="book"><img src="./images/books/07.jpg" alt="livre" /></div>
+                <div class="book"><img src="./images/books/08.jpg" alt="livre" /></div>
+                <div class="book"><img src="./images/books/09.jpg" alt="livre" /></div>
+                <div class="book"><img src="./images/books/10.jpg" alt="livre" /></div>
+                <div class="book"><img src="./images/books/11.jpg" alt="livre" /></div>
+                <div class="book"><img src="./images/books/12.jpg" alt="livre" /></div>
+                <div class="album hide"><img src="./images/albums/01.jpg" alt="album" /></div>
+                <div class="album hide"><img src="./images/albums/02.jpg" alt="album" /></div>
+                <div class="album hide"><img src="./images/albums/03.jpg" alt="album" /></div>
+                <div class="album hide"><img src="./images/albums/04.jpg" alt="album" /></div>
+                <div class="album hide"><img src="./images/albums/05.jpg" alt="album" /></div>
+                <div class="album hide"><img src="./images/albums/06.jpg" alt="album" /></div>
+                <div class="album hide"><img src="./images/albums/07.jpg" alt="album" /></div>
+                <div class="album hide"><img src="./images/albums/08.jpg" alt="album" /></div>
+                <div class="album hide"><img src="./images/albums/09.jpg" alt="album" /></div>
+                <div class="album hide"><img src="./images/albums/10.jpg" alt="album" /></div>
+                <div class="album hide"><img src="./images/albums/11.jpg" alt="album" /></div>
+                <div class="album hide"><img src="./images/albums/12.jpg" alt="album" /></div>
+                <div class="album hide"><img src="./images/albums/13.jpg" alt="album" /></div>
+                <div class="boxes hide"><img src="./images/boxes/01.jpg" alt="box" /></div>
+                <div class="boxes hide"><img src="./images/boxes/02.jpg" alt="box" /></div>
+                <div class="boxes hide"><img src="./images/boxes/03.jpg" alt="box" /></div>
+                <div class="boxes hide"><img src="./images/boxes/04.jpg" alt="box" /></div>
+                <div class="boxes hide"><img src="./images/boxes/05.jpg" alt="box" /></div>
+                <div class="boxes hide"><img src="./images/boxes/06.jpg" alt="box" /></div>
+                <div class="boxes hide"><img src="./images/boxes/07.jpg" alt="box" /></div>
+                <div class="boxes hide"><img src="./images/boxes/08.jpg" alt="box" /></div>
+                <div class="boxes hide"><img src="./images/boxes/09.jpg" alt="box" /></div>
+                <div class="boxes hide"><img src="./images/boxes/10.jpg" alt="box" /></div>
+                <div class="boxes hide"><img src="./images/boxes/11.jpg" alt="box" /></div>
+                <div class="boxes hide"><img src="./images/boxes/12.jpg" alt="box" /></div>
+            </div>
+        </div>
+    </section>
+    <section id="testimonials">
+        <div class="container">
+            <h3 class="has-text-centered">TÉMOIGNAGES</h3>	
+            <div class="columns">
+                <div class="column has-text-centered">
+                    <img src="./images/photos/cecile.jpg" class="is-circle" alt="photo" />
+                    <p><b><a href="https://twitter.com/AuGreDuCoton" target="_blank">@AuGreDuCoton</a></b></p>
+                    <q>Je vous recommande vivement ses services pour vos travaux de reliure, de cartonnage et papeterie car elle fait des merveilles avec le papier et le carton.</q>
+                </div>
+                <div class="column has-text-centered">
+                    <img src="./images/photos/valerie.jpg" class="is-circle" alt="photo" />
+                    <p><b><a href="http://www.synercoop.org/" target="_blank">Valerie OSMONT</a></b></p>
+                    <q>J'ai eu la chance d'acheter un paravent de jeu de rôle pour un Maître du jeu : une vraie merveille ! créatif, magnifique... Quel talent </q>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section id="contact">
+        <div class="container has-text-centered">
+            <h3>CONTACT</h3>
+            <iframe width="100%" height="300px" frameBorder="0" src="https://umap.openstreetmap.fr/fr/map/larbreapagesfr_155740?scaleControl=false&miniMap=false&scrollWheelZoom=false&zoomControl=true&allowEdit=false&moreControl=true&searchControl=null&tilelayersControl=null&embedControl=null&datalayersControl=true&onLoadPanel=undefined&captionBar=false"></iframe>
+            <div class="columns">
+                <div class="column">
+                    <i class="fa fa-map-marker fa-2x"></i>
+                    <p>108 rue Charles III Nancy 54000</p>
+                </div>
+                <div class="column">
+                    <i class="fa fa-phone fa-2x"></i>
+                    <p>06.17.48.30.69</p>
+                </div>
+                <div class="column">
+                    <i class="fa fa-envelope fa-2x"></i>
+                    <p><a href="mailto:contact@larbreapages.fr">contact@larbreapages.fr</a></p>
+                </div>
+            </div>
+        </div>
+        </div>
+    </section>
+    <section id="about">
+        <div class="container">
+            <h3 class="has-text-centered">À PROPOS</h3>
+            <div class="columns">
+                <div class="column is-narrow has-text-centered">
+                    <img src="./images/photos/camille.jpg" width="300" alt="photo" />
+                </div>
+                <div class="column">
+                    <p>Le goût des belles choses et de la création m’ont naturellement orienté vers un univers manuel et imaginatif. Relieur d’Art est un métier que j’ai découvert après mon bac Génie Des Matériaux, lors d’une année en classe d’Art Appliqué.</p><br />
+                    <p>La reliure d’art mêle à la fois tradition, savoir-faire et création et m’apporte beaucoup de plaisir. En effet, sans cesse à la recherche de nouvelles techniques, structures, matières et associations, j’aime nourrir ma créativité et maitriser toujours plus mes gestes grâce à de nouveaux projets.</p><br />
+                    <p>C’est pourquoi, après avoir travaillé auprès de plusieurs Relieurs d’Art et chez Renov’Livres, relieur industriel à Ludres, j'ai décidé de monter mon propre atelier de reliure consacré principalement aux Livres d’Or et Albums Photo haut de gamme. Ainsi, chaque projet et pour moi unique dans lequel je m’investis pour mon plus grand plaisir. J’explore alors associations de couleurs et matières afin de matérialiser durablement le projet que vous m’avez confié.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <footer class="footer">
+        <div class="container">
+            <div class="content has-text-centered">
+                <p>
+                    &copy;2016-2017 L'Arbre à Pages. Tous Droits Réservés <br>
+                    Partenaires : <a href="http://augreducoton.fr/" target="_blank">Au Gré Du Coton</a>, <a href="http://www.synercoop.org/" target="_blank">Synercoop</a>
+                </p>
+                <p>
+                    <a href="https://facebook.com/larbreapages/" class="icon" target="_blank"><i class="fa fa-facebook-official"></i></a>
+                    <a href="https://instagram.com/larbreapagesfr/" class="icon" target="_blank"><i class="fa fa-instagram"></i></a>
+                    <a href="https://twitter.com/larbreapages" class="icon" target="_blank"><i class="fa fa-twitter"></i></a>
+                    <a href="https://pinterest.com/larbreapages/" class="icon" target="_blank"><i class="fa fa-pinterest"></i></a>
+                    <a href="https://github.com/larbreapages/larbreapages" class="icon" target="_blank"><i class="fa fa-github"></i></a>
+                </p>
+            </div>
+        </div>
+    </footer>
 </body>
 </html>

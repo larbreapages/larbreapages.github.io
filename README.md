@@ -1,20 +1,25 @@
-larbreapages.fr
+Atelier de Reliure d’Art
 ===
 
-Express + Webpack + Docker + ES6 + Makefile + Font-awesome + normalize + SCSS + bootstrap
+Bulma + Express + Webpack + ES6 + Makefile + Font-awesome + normalize + SCSS
 
 Install
 ---
 
-`make install`
+```bash
+make install
+```
 
 Build
 ---
 
-`make build`
+```bash
+make build
+```
 
 Run
 ---
 
-`make run`
-
+```bash
+make run
+```

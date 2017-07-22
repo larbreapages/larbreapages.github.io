@@ -1,0 +1,66 @@
+@include tablet {
+    // NAVBAR
+
+    .nav-item a:not(.button).is-tab:hover, a.nav-item:not(.button).is-tab:hover {
+        border-bottom: 2px solid $primary;
+        padding-bottom: calc(0.75rem - 2px);
+    }
+
+    .nav-item a:not(.button).is-tab.is-active, a.nav-item:not(.button).is-tab.is-active {
+        border-bottom: 2px solid $primary;
+        padding-bottom: calc(0.75rem - 2px);
+    }
+
+    // HEADER
+
+    .hero .border {
+        @include border;
+        margin-bottom: 1.5rem;
+    }
+
+    .hero .title {
+        font-size: $size-3;
+    }
+
+    .hero .logo-title {
+        font-size: 4rem;
+    }
+
+    .hero .hero-body .subtitle {
+        margin-bottom: 0px;
+    }
+
+    .hero .hero-body p {
+        margin-top: 10px;
+        margin-bottom: 20px;
+    }
+
+    .hero .button {
+        font-size: $size-4;
+    }
+
+    .hero .hero-body a.button:first-child {
+        margin-right: 10px;
+    }
+
+    // PORTFOLIO
+
+    #portfolio .tabs {
+        font-size: 1.5rem;
+    }
+
+    #portfolio .tabs a {
+        padding: 0.5em 1em;
+    }
+
+    // GALLERY
+
+    #gallery div, #gallery img {
+        height: 200px;
+    }
+
+    #gallery {
+        margin-left: 0px;
+        margin-right: 0px;
+    }
+}

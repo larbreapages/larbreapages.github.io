@@ -3,15 +3,12 @@ import express from 'express';
 import path from 'path';
 import compression from 'compression';
 import bodyParser from 'body-parser';
-import payment from 'bookbuilder/dist/server/payment';
 
 const app = express();
-const PORT = process.env.PORT || 9000;
+const PORT = process.env.PORT || 5000;
 app.use(compression());
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
-
-app.use(payment);
 
 if (process.env.NODE_ENV === 'production') {
     app.use(express.static(path.join(__dirname)));

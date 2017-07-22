@@ -1,7 +1,8 @@
 import HtmlWebpackPlugin from 'html-webpack-plugin';
 import ExtractTextPlugin from 'extract-text-webpack-plugin';
-import CopyWebpackPlugin from 'copy-webpack-plugin';
 import StringReplacePlugin from 'string-replace-webpack-plugin';
+import BrowserSyncPlugin from 'browser-sync-webpack-plugin';
+import ScriptExtHtmlWebpackPlugin from 'script-ext-html-webpack-plugin';
 
 module.exports = {
     entry: {
@@ -17,7 +18,7 @@ module.exports = {
     module: {
         loaders: [
             { test: /\.html$/, loader: 'html-loader' },
-            { test: /\.s?css$/, use: ExtractTextPlugin.extract({ fallback: 'style-loader', use: ['css-loader', 'sass-loader'] }) },
+            { test: /\.s?css$/, use: ExtractTextPlugin.extract({ fallback: 'style-loader', use: ['css-loader', 'sass-loader', 'postcss-loader'] }) },
             { test: /\.jsx?$/, use: 'babel-loader', exclude: /node_modules/ },
             {
                 test: /\.(png|ico|jpg|gif|svg|woff2?|eot|otf|ttf)(\?.*)?$/,
@@ -39,14 +40,16 @@ module.exports = {
         ],
     },
     plugins: [
-        new HtmlWebpackPlugin({
-            filename: 'index.html',
-            template: `${__dirname}/src/index.html`,
-            hash: true,
-        }),
+        new HtmlWebpackPlugin({ filename: 'index.html', template: `${__dirname}/src/index.html`, hash: true }),
+        new HtmlWebpackPlugin({ filename: 'demande.html', template: `${__dirname}/src/demande.html`, hash: true }),
         new ExtractTextPlugin({ filename: '[name].css', allChunks: false }),
-        new CopyWebpackPlugin([
-            { from: 'node_modules/bookbuilder/dist/*.png', to: `${__dirname}/public/`, flatten: true },
-        ]),
+        new BrowserSyncPlugin({
+            host: 'localhost',
+            port: 3000,
+            server: { baseDir: ['public'] },
+        }),
+        new ScriptExtHtmlWebpackPlugin({
+            defaultAttribute: 'async'
+        })
     ],
 };
