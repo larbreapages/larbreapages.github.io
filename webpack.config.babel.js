@@ -18,7 +18,7 @@ module.exports = {
     module: {
         loaders: [
             { test: /\.html$/, loader: 'html-loader' },
-            { test: /\.s?css$/, use: ExtractTextPlugin.extract({ fallback: 'style-loader', use: ['css-loader', 'sass-loader'] }) },
+            { test: /\.s?css$/, use: ExtractTextPlugin.extract({ fallback: 'style-loader', use: ['css-loader', 'sass-loader', 'postcss-loader'] }) },
             { test: /\.jsx?$/, use: 'babel-loader', exclude: /node_modules/ },
             {
                 test: /\.(png|ico|jpg|gif|svg|woff2?|eot|otf|ttf)(\?.*)?$/,

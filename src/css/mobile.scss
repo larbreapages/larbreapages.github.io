@@ -13,73 +13,6 @@
     color: white;
 }
 
-.hero {
-    width:100%;
-    background: linear-gradient( rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6) ), url('../images/background.jpg');
-    background-position:center center;
-    background-size: cover;
-}
-
-.logo {
-    width: 125px;
-    margin-bottom: -15px;
-}
-
-h1.logo-title {
-    font-family: "GoodVibrations";
-    margin-bottom: 0rem!important;
-    color: $primary;
-}
-
-.title {
-    font-size: $size-4;
-}
-
-.hero-foot a:hover {
-    color: $primary!important;
-}
-
-
-p.quote {
-    margin-bottom: 1.5rem!important;
-}
-
-// Buttons
-
-.hero-body .button {
-    margin-top: 0px;
-    margin-bottom: 10px;
-    border-radius: 0px;
-}
-
-.hero-body a.button:last-child {
-    margin-left: 10px;
-}
-
-.button.is-primary.is-inverted:hover {
-    color: $primary;
-    border: 1px solid $primary;
-}
-
-.button.is-primary.is-inverted {
-    background-color:transparent;
-    color: white;
-    border: 1px solid white;
-}
-
-// Navbar
-
-.nav {
-    position: fixed;
-    width: 100%;
-    z-index: 100;
-    overflow: hidden;
-}
-
-.nav-left::-webkit-scrollbar {
-    display: none;
-}
-
 h1 {
     font-size: $size-1;
 }
@@ -96,96 +29,112 @@ h4 {
     font-size: $size-4;
 }
 
-// Portfolio
-
-#gallery {
-  display: flex;
-  flex-wrap: wrap;
-  margin-left: 5px;
-  margin-right: 5px;
-}
-
-#gallery::after {
-  content: '';
-  flex-grow: 999999999;
-}
-
-#gallery div {
-  flex-grow: 1;
-  height: 100px;
-  margin: 2px;
-}
-
-#gallery img {
-  height: 100px;
-  object-fit: cover;
-  max-width: 100%;
-  min-width: 100%;
-  vertical-align: bottom;
-}
-
 .fa-2x {
-    font-size: 2em!important;
+    font-size: 2em;
+}
+
+.fa-3x {
+    font-size: 3em;
 }
 
 .fa-4x {
-    font-size: 4em!important;
-}
-
-#contact {
-    text-align: center;
-}
-
-#contact iframe {
-    width: 100%;
-    padding: 0px 10px;
-}
-
-#services .fa {
-    padding: 30px;
-}
-
-.is-circle {
-    border-radius: 50%;
-}
-
-.footer {
-    padding: 3rem 1.5rem 2rem;
+    font-size: 4em;
 }
 
 .hide {
     display: none;
 }
 
-.nav-scrolled {
-    box-shadow: 0 5px 30px 0 rgba(0,0,0,0.1)!important;
-    background-color: rgb(248, 248, 248)!important;
+// NAVBAR
 
-    a {
-        color: black!important;
-    }
+.nav {
+    position: fixed;
+    width: 100%;
+    z-index: 100;
+    overflow: hidden;
 }
+
+.nav {
+    transition: all 0.3s ease;
+}
+
+.hero .nav.nav-scrolled {
+    box-shadow: 0 5px 30px 0 rgba(0,0,0,0.1);
+    background-color: rgb(248, 248, 248);
+}
+
+.nav.nav-scrolled a.nav-item,
+.nav.nav-scrolled a.nav-item.is-active,
+.nav.nav-scrolled a.nav-item:hover {
+    color: $text;
+}
+
+// HEADER
 
 .hero {
-    padding-top: 0px!important;
-    padding-bottom: 0px!important;
+    width:100%;
+    background: linear-gradient( rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6) ), url('../images/background.jpg');
+    background-position:center center;
+    background-size: cover;
 }
 
-section#portfolio, section#contact {
-    background-color: #F5F5F5;
+.hero .logo {
+    width: 200px;
+    margin-bottom: -15px;
 }
 
-section {
+.hero .logo-title {
+    font-family: "GoodVibrations";
+    color: $primary;
+}
+
+.hero .title {
+    font-size: $size-4;
+}
+
+.hero .hero-body .button {
+    margin-bottom: 10px;
+}
+
+.hero .button.is-primary.is-inverted:hover {
+    color: $primary;
+    border: 1px solid $primary;
+}
+
+.hero .button.is-primary.is-inverted {
+    background-color:transparent;
+    color: white;
+    border: 1px solid white;
+}
+
+.hero .hero-foot {
+    padding-right: 5px;
+}
+
+.hero .hero-foot a:hover {
+    color: $primary;
+}
+
+// SECTION
+
+section:not(#home) {
     padding-top: 50px;
     padding-bottom: 50px;
 }
 
-#services .column {
-    margin-left: 10px;
+section h3 {
+    font-size: $size-1;
+    margin-bottom: 50px;
 }
 
-#services img {
-    margin-top: -30px;
+section:nth-child(odd) {
+    background-color: #F5F5F5;
+}
+
+// SERVICES
+
+#services .fa {
+    padding: 30px;
 }
 
 #services .column div {
@@ -194,73 +143,93 @@ section {
 
 #services .column > p {
     text-align: justify;
+    margin-right: 10px;
+    margin-left: 10px;
 }
 
-.tabs a {
-    padding: 0.5em 0.4em;
+// PORTFOLIO
+
+#portfolio .tabs {
+    font-size: 16px;
 }
 
-section#about p {
-   margin: 0px 10px;
-   text-align: justify;
+#portfolio .tabs i {
+    font-size: 25px;
 }
 
-#testimonials .is-circle {
-    width: 160px;
-    height: 160px;
-    box-shadow: 0 5px 11px 0 rgba(0,0,0,.18), 0 4px 15px 0 rgba(0,0,0,.15);
+#portfolio .tabs a {
+    padding: 0.5em 0.5em;
 }
 
-q {
-    font-size: $size-5;
+// GALLERY
+
+#gallery {
+    display: flex;
+    flex-wrap: wrap;
+    margin-left: 5px;
+    margin-right: 5px;
 }
 
-q:before {
-    padding-right: 10px;
+#gallery::after {
+    content: '';
+    flex-grow: 999999999;
 }
 
-q:after {
-    padding-left: 10px;
+#gallery div {
+    flex-grow: 1;
+    height: 100px;
+    margin: 2px;
+}
+
+#gallery img {
+    height: 100px;
+    object-fit: cover;
+    max-width: 100%;
+    min-width: 100%;
+    vertical-align: bottom;
+}
+
+// CONTACT
+
+#contact iframe {
+    width: 100%;
+    padding: 0px 10px;
 }
 
 #contact .columns {
     margin-top: 10px;
 }
 
-.tabs i {
-    font-size: 25px!important;
+// TESTIMONIALS
+
+#testimonials .is-circle {
+    width: 160px;
+    height: 160px;
+    box-shadow: 0 5px 11px 0 rgba(0,0,0,.18), 0 4px 15px 0 rgba(0,0,0,.15);
+    border-radius: 50%;
 }
 
-#about .columns {
-    margin-bottom: inherit;
+#testimonials q {
+    font-size: $size-5;
 }
 
-.nav {
-    transition: all 0.3s ease;
+#testimonials q:before {
+    padding-right: 10px;
 }
 
-#services .column > p {
-    margin-right: 10px;
+#testimonials q:after {
+    padding-left: 10px;
 }
 
-.tabs.is-large {
-    font-size: 16px;
+// ABOUT
+
+#about p {
+   margin: 0px 10px;
+   text-align: justify;
 }
 
-.nav a {
-    font-size: inherit!important;
-}
+// FOOTER
 
-section h3 {
-    margin-bottom: 50px;
-}
-
-.nav-item a:not(.button).is-tab:hover, a.nav-item:not(.button).is-tab:hover {
-    border-bottom: 2px solid $primary;
-    padding-bottom: calc(0.75rem - 2px);
-}
-
-.nav-item a:not(.button).is-tab.is-active, a.nav-item:not(.button).is-tab.is-active {
-    border-bottom: 2px solid $primary;
-    padding-bottom: calc(0.75rem - 2px);
+.footer {
+    padding: 3rem 1.5rem 2rem;
 }
