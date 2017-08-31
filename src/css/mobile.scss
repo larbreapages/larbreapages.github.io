@@ -235,3 +235,8 @@ section:nth-child(odd) {
 .footer {
     padding: 3rem 1.5rem 2rem;
 }
+
+.copyleft {
+    display:inline-block;
+    transform: rotate(180deg);
+}
