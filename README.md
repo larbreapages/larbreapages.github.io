@@ -23,3 +23,8 @@ Run
 ```bash
 make run
 ```
+
+License
+---
+
+GNU GPL v3.0
