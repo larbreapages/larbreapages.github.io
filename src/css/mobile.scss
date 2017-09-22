@@ -209,10 +209,11 @@ section:nth-child(odd) {
     height: 160px;
     box-shadow: 0 5px 11px 0 rgba(0,0,0,.18), 0 4px 15px 0 rgba(0,0,0,.15);
     border-radius: 50%;
+    filter: grayscale(100%);
 }
 
 #testimonials q {
-    font-size: $size-5;
+    font-size: $size-6;
 }
 
 #testimonials q:before {
