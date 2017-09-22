@@ -20,7 +20,7 @@ dev: ## Run dev environment
 	@ PORT=${PORT} NODE_ENV=development ./node_modules/.bin/pm2 start --watch src/ --no-daemon src/js/server.js --interpreter ./node_modules/.bin/babel-node & make watch
 
 deploy: build ## Run production application
-	@ tar --exclude='node_modules' --exclude='.git' --exclude='src' -cv . $$* | ssh larbreapages "tar:in larbreapages.fr"
+	@ tar --exclude='node_modules' --exclude='.git' --exclude='src' --exclude='*.swp' -cv . $$* | ssh larbreapages "tar:in larbreapages.fr"
 
 browser-sync:
 	@ ./node_modules/.bin/browser-sync start --proxy "http://0.0.0.0:${PORT}" --files "public/*"
