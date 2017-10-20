@@ -26,7 +26,11 @@ h3 {
 }
 
 h4 {
-    font-size: $size-4;
+    font-size: $size-2;
+}
+
+h5 {
+    font-size: $size-5;
 }
 
 .fa-2x {
@@ -124,7 +128,7 @@ section:not(#home) {
     padding-bottom: 50px;
 }
 
-section h3 {
+section h4 {
     font-size: $size-1;
     margin-bottom: 50px;
 }
@@ -135,8 +139,17 @@ section:nth-child(odd) {
 
 // SERVICES
 
-#services .fa {
+#services .container:first-child .fa {
     padding: 30px;
+}
+
+#services .container:nth-child(2) {
+    margin-top: 20px;
+}
+
+#services .container:nth-child(2) .fa {
+    padding: 2px;
+    margin-right: 10px;
 }
 
 #services .column div {
