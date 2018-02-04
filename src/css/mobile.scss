@@ -49,6 +49,13 @@ h5 {
     display: none;
 }
 
+hr {
+    background-color: #AD8D4D;
+    margin: 30px auto;
+    max-width: 1344px;
+    height: 0.5px;
+}
+
 // NAVBAR
 
 .nav {
@@ -114,6 +121,7 @@ h5 {
 
 .hero .hero-foot {
     padding-right: 5px;
+    margin-bottom: 25px;
 }
 
 .hero .hero-foot a:hover {
@@ -160,6 +168,7 @@ section:nth-child(odd) {
     text-align: justify;
     margin-right: 10px;
     margin-left: 10px;
+    margin-bottom: 20px;
 }
 
 // PORTFOLIO
@@ -223,6 +232,8 @@ section:nth-child(odd) {
     box-shadow: 0 5px 11px 0 rgba(0,0,0,.18), 0 4px 15px 0 rgba(0,0,0,.15);
     border-radius: 50%;
     filter: grayscale(100%);
+    background-size: cover;
+    margin: auto;
 }
 
 #testimonials q {
@@ -241,6 +252,7 @@ section:nth-child(odd) {
 
 #about p {
    margin: 0px 10px;
+   margin-bottom: 20px;
    text-align: justify;
 }
 
