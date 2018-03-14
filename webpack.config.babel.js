@@ -17,7 +17,7 @@ module.exports = {
     },
     module: {
         loaders: [
-            { test: /\.html$/, loader: 'html-loader', options: { interpolate: true } },
+            { test: /\.html$/, loader: 'html-loader?minimize=false' },
             { test: /\.s?css$/, use: ExtractTextPlugin.extract({ fallback: 'style-loader', use: ['css-loader', 'sass-loader', 'postcss-loader'] }) },
             { test: /\.jsx?$/, use: 'babel-loader', exclude: /node_modules/ },
             {
