@@ -22,9 +22,6 @@ dev: ## Run dev environment
 deploy: build ## Deploy application
 	@ tar --exclude='node_modules' --exclude='.git' --exclude='src' --exclude='*.swp' -cv . $$* | ssh larbreapages "tar:in larbreapages.fr"
 
-browser-sync:
-	@ ./node_modules/.bin/browser-sync start --proxy "http://0.0.0.0:${PORT}" --files "public/*"
-
 lint:
 	@ ./node_modules/.bin/eslint src/
 
