@@ -1,25 +1,18 @@
 Atelier de Reliure d’Art
 ===
 
-Bulma + Express + Webpack + ES6 + Makefile + Font-awesome + normalize + SCSS
+Bulma + Webpack + Font-awesome + normalize.css
 
 Install
 ---
 
 ```bash
-make install
-```
-
-Build
----
-
-```bash
-make build
+npm install
 ```
 
 Run
 ---
 
 ```bash
-make run
+npm start
 ```

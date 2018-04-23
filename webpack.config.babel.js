@@ -1,10 +1,13 @@
 import HtmlWebpackPlugin from 'html-webpack-plugin';
 import ExtractTextPlugin from 'extract-text-webpack-plugin';
 import StringReplacePlugin from 'string-replace-webpack-plugin';
+import CopyWebpackPlugin from 'copy-webpack-plugin';
 import BrowserSyncPlugin from 'browser-sync-webpack-plugin';
 import ScriptExtHtmlWebpackPlugin from 'script-ext-html-webpack-plugin';
 
-module.exports = {
+const env = process.env.NODE_ENV || 'development';
+
+const config = {
     entry: {
         index: [
             './src/js/main.js',
@@ -13,10 +16,10 @@ module.exports = {
     },
     output: {
         path: `${__dirname}/public`,
-        filename: 'bundle.js',
+        filename: (env === 'production') ? 'bundle-[hash].js' : 'bundle.js',
     },
     module: {
-        loaders: [
+        rules: [
             { test: /\.html$/, loader: 'html-loader?minimize=false' },
             { test: /\.s?css$/, use: ExtractTextPlugin.extract({ fallback: 'style-loader', use: ['css-loader', 'sass-loader', 'postcss-loader'] }) },
             { test: /\.jsx?$/, use: 'babel-loader', exclude: /node_modules/ },
@@ -41,15 +44,14 @@ module.exports = {
     },
     plugins: [
         new HtmlWebpackPlugin({ filename: 'index.html', template: `${__dirname}/src/index.html`, hash: true }),
-        new HtmlWebpackPlugin({ filename: 'demande.html', template: `${__dirname}/src/demande.html`, hash: true }),
         new ExtractTextPlugin({ filename: '[name].css', allChunks: false }),
-        new BrowserSyncPlugin({
-            host: 'localhost',
-            port: 3000,
-            server: { baseDir: ['public'] },
-        }),
-        new ScriptExtHtmlWebpackPlugin({
-            defaultAttribute: 'async'
-        })
+        new ScriptExtHtmlWebpackPlugin({ defaultAttribute: 'async' }),
+        new CopyWebpackPlugin([{ from: './static/' }]),
     ],
 };
+
+if (env === 'development') {
+    config.plugins.push(new BrowserSyncPlugin({ host: 'localhost', port: 3000, server: { baseDir: ['public'] } }));
+}
+
+export default config;
