@@ -9,9 +9,7 @@
     "start:prod": "http-server public",
     "start:dev": "webpack --mode=development --watch -d",
     "build": "webpack --mode=production -p --progress --colors",
-    "lint": "eslint src/",
-    "deploy": "npm run build && npm run deploy:push",
-    "deploy:push": "tar --exclude='node_modules' --exclude='.git' --exclude='src' --exclude='*.swp' -cv . $$* | ssh larbreapages 'tar:in larbreapages.fr'"
+    "lint": "eslint src/"
   },
   "engines": {
     "node": "8.9.4",
