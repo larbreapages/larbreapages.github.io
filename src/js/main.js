@@ -1,4 +1,5 @@
 import 'zenscroll';
+import '@fancyapps/fancybox/dist/jquery.fancybox.min';
 
 console.log('Welcome to larbreapages.fr');
 
