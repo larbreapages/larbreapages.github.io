@@ -1,5 +1,9 @@
 import 'zenscroll';
+import L from 'leaflet';
 import '@fancyapps/fancybox/dist/jquery.fancybox.min';
+import iconRetinaUrl from 'leaflet/dist/images/marker-icon-2x.png';
+import iconUrl from 'leaflet/dist/images/marker-icon.png';
+import shadowUrl from 'leaflet/dist/images/marker-shadow.png';
 
 console.log('Welcome to larbreapages.fr');
 
@@ -50,3 +54,19 @@ window.onload = () => {
         }
     }
 };
+
+// Map
+
+delete L.Icon.Default.prototype._getIconUrl; // eslint-disable-line
+L.Icon.Default.mergeOptions({ iconRetinaUrl, iconUrl, shadowUrl });
+
+const mymap = L.map('mapid').setView([48.686635, 6.171030], 16);
+
+L.tileLayer('https://maps.heigit.org/openmapsurfer/tiles/roads/webmercator/{z}/{x}/{y}.png', {
+    maxZoom: 18,
+    id: 'mapbox.streets',
+}).addTo(mymap);
+
+const marker = L.marker([48.686635, 6.171030]).addTo(mymap);
+
+marker.bindPopup("<b>L'Arbre à Pages</b>").openPopup();
