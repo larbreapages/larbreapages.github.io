@@ -1,7 +1,0 @@
-- [x] Resolve problem render html
-- [x] Open-source website on github.com
-- [x] HTTPS
-- [ ] Blur background loading
-- [ ] CDN
-- [ ] Add english version
-- [ ] Lazy load for images and fonts
