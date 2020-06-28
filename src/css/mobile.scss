@@ -130,6 +130,10 @@ hr {
     transition: 0.3s;
 }
 
+.hero .hero-foot ul li {
+    display: inline;
+}
+
 // SECTION
 
 section:not(#home) {
@@ -225,6 +229,14 @@ section:nth-child(odd) {
     margin-top: 10px;
 }
 
+#contact .column {
+    margin-bottom: 1rem;
+}
+
+#contact .column i + * {
+    margin-top: 0.75rem;
+}
+
 // TESTIMONIALS
 
 #testimonials .is-circle {
@@ -277,6 +289,15 @@ section:nth-child(odd) {
 .copyleft {
     display:inline-block;
     transform: rotate(180deg);
+}
+
+.footer .links {
+    list-style: none;
+    margin: 0;
+}
+
+.footer .links li{
+    display: inline;
 }
 
 // MAP
