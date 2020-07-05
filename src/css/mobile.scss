@@ -1,11 +1,11 @@
 @font-face {
     font-family: "Raleway";
-    src: url('../fonts/raleway.woff2');
+    src: url("../fonts/raleway.woff2");
 }
 
 @font-face {
     font-family: "GoodVibrations";
-    src: url('../fonts/goodvibrationsscript.ttf');
+    src: url("../fonts/goodvibrationsscript.ttf");
 }
 
 ::selection {
@@ -71,7 +71,7 @@ hr {
 }
 
 .hero .nav.nav-scrolled {
-    box-shadow: 0 5px 30px 0 rgba(0,0,0,0.1);
+    box-shadow: 0 5px 30px 0 rgba(0, 0, 0, 0.1);
     background-color: rgb(248, 248, 248);
 }
 
@@ -84,9 +84,9 @@ hr {
 // HEADER
 
 .hero {
-    width:100%;
-    background: linear-gradient( rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6) ), url('../images/background.jpg');
-    background-position:center center;
+    width: 100%;
+    background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url("../images/background.jpg");
+    background-position: center center;
     background-size: cover;
 }
 
@@ -115,7 +115,7 @@ hr {
 }
 
 .hero .button.is-primary.is-inverted {
-    background-color:transparent;
+    background-color: transparent;
     color: white;
     border: 1px solid white;
 }
@@ -147,7 +147,7 @@ section h4 {
 }
 
 section:nth-child(odd) {
-    background-color: #F5F5F5;
+    background-color: #f5f5f5;
 }
 
 // SERVICES
@@ -200,7 +200,7 @@ section:nth-child(odd) {
 }
 
 #gallery::after {
-    content: '';
+    content: "";
     flex-grow: 999999999;
 }
 
@@ -242,7 +242,7 @@ section:nth-child(odd) {
 #testimonials .is-circle {
     width: 160px;
     height: 160px;
-    box-shadow: 0 5px 11px 0 rgba(0,0,0,.18), 0 4px 15px 0 rgba(0,0,0,.15);
+    box-shadow: 0 5px 11px 0 rgba(0, 0, 0, 0.18), 0 4px 15px 0 rgba(0, 0, 0, 0.15);
     border-radius: 50%;
     filter: grayscale(100%);
     background-size: cover;
@@ -265,19 +265,47 @@ section:nth-child(odd) {
 // ABOUT
 
 #about p {
-   margin: 0px 10px;
-   margin-bottom: 20px;
-   text-align: justify;
+    margin: 0px 10px;
+    margin-bottom: 20px;
+    text-align: justify;
 }
 
 #about img.profil {
-    box-shadow: 0 5px 11px 0 rgba(0,0,0,.18), 0 4px 15px 0 rgba(0,0,0,.15);
+    box-shadow: 0 5px 11px 0 rgba(0, 0, 0, 0.18), 0 4px 15px 0 rgba(0, 0, 0, 0.15);
     border-radius: 2%;
 }
 
 #about p.name {
     font-size: 13px;
-    text-align:center;
+    text-align: center;
+}
+
+//Legals page
+#legal {
+    line-height: 1.75;
+
+    .container{
+        max-width: 60rem;
+        padding: 2rem 1rem;
+    }
+    h2 {
+        margin-top: 1.5rem;
+        font-size: 2rem;
+    }
+    dl dt {
+        font-weight: bold;
+    }
+    dl dd {
+        display: inline;
+        margin: 0;
+    }
+    dl dd:after {
+        display: block;
+        content: "";
+    }
+    dl dt {
+        display: inline-block;
+    }
 }
 
 // FOOTER
@@ -287,7 +315,7 @@ section:nth-child(odd) {
 }
 
 .copyleft {
-    display:inline-block;
+    display: inline-block;
     transform: rotate(180deg);
 }
 
@@ -296,10 +324,12 @@ section:nth-child(odd) {
     margin: 0;
 }
 
-.footer .links li{
+.footer .links li {
     display: inline;
 }
 
 // MAP
 
-#mapid { height: 300px; }
+#mapid {
+    height: 300px;
+}
