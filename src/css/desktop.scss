@@ -81,3 +81,9 @@
         margin-bottom:0;
     }
 }
+
+@include widescreen {
+    .nav-left, .nav-right {
+        flex-basis: auto;
+    }
+}
