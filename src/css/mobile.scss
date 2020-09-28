@@ -137,6 +137,25 @@ hr {
 .hero .hero-foot ul li {
     display: inline;
 }
+.container ul a.icon{
+    position: relative;
+    .icon-aar{
+        display: block;
+        height: 100%;
+        width: 100%;
+        background-size: 1.75rem;
+        background-repeat: no-repeat;
+        position: absolute;
+        top: .25rem;
+        &.icon-white {
+            background-image: url(../images/LOGO_AAR_blanc_150x150.png);
+        }
+        &.icon-gold {
+            background-image: url(../images/LOGO_AAR_gold_150x150.png);
+        }
+    }
+    
+} 
 
 // SECTION
 
