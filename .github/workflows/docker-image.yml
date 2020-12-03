@@ -6,7 +6,7 @@ on:
   pull_request:
 
 env:
-  IMAGE: registry.ethibox.fr/larbreapages.fr
+  IMAGE: registry.larbreapages.fr/larbreapages.fr
 
 jobs:
   deploy:
@@ -19,7 +19,7 @@ jobs:
       - name: Login to registry
         uses: docker/login-action@v1
         with:
-          registry: registry.ethibox.fr
+          registry: registry.larbreapages.fr
           username: ${{ secrets.DOCKER_USERNAME }}
           password: ${{ secrets.DOCKER_PASSWORD }}
 
@@ -34,4 +34,4 @@ jobs:
 
       - name: Deploy on docker swarm
         run: |
-          curl -X POST https://portainer.ethibox.fr/api/webhooks/beb7feca-fdcd-446b-9d23-456a1d86253d
+          curl -X POST https://portainer.larbreapages.fr/api/webhooks/2c015e6d-dc2d-4607-bdcd-77414f27bd38
