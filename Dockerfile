@@ -1,6 +1,6 @@
 # Build
 
-FROM node:10.12-alpine AS build
+FROM node:10.23-alpine AS build
 
 WORKDIR /app
 
@@ -12,7 +12,7 @@ RUN npm run build
 
 # Production
 
-FROM node:10.12-alpine
+FROM node:10.23-alpine
 
 COPY --from=build /app/public /app
 
