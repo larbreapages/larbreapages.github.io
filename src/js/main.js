@@ -60,13 +60,14 @@ window.onload = () => {
 delete L.Icon.Default.prototype._getIconUrl; // eslint-disable-line
 L.Icon.Default.mergeOptions({ iconRetinaUrl, iconUrl, shadowUrl });
 
-const mymap = L.map('mapid').setView([48.686635, 6.171030], 16);
+const mymap = L.map('mapid').setView([48.68652142003192, 6.171032277464243], 16);
 
-L.tileLayer('https://maps.heigit.org/openmapsurfer/tiles/roads/webmercator/{z}/{x}/{y}.png', {
-    maxZoom: 18,
+L.tileLayer('https://{s}.tile.openstreetmap.fr/osmfr/{z}/{x}/{y}.png', {
+    maxZoom: 19,
     id: 'mapbox.streets',
+    attribution: '&copy; OpenStreetMap France | &copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
 }).addTo(mymap);
 
-const marker = L.marker([48.686635, 6.171030]).addTo(mymap);
+const marker = L.marker([48.68652142003192, 6.171032277464243]).addTo(mymap);
 
 marker.bindPopup("<b>L'Arbre à Pages</b>").openPopup();
